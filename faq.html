@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs & Footer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f8;
+      color: #333;
+    }
+
+    .items{
+        margin: auto 0px;
+    }
+
+    #Heading {
+      text-align: left;
+      font-size: 30px;
+      color: #c46cab;
+      margin:30px auto ;
+    }
+
+    .help {
+      margin-left: 30px;
+      background-color: #efd98b;
+      padding: 12px 24px;
+      border-radius: 0px 15px 0px 15px;
+      transition: 0.3s ease;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .help:hover {
+      background-color: #fff49d;
+      transform: scale(1.05);
+    }
+
+    .accordion {
+      background-color: #e18ed9;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      font-size: 17px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 8px;
+      margin: 10px 0;
+      color: #fff;
+    }
+
+    .accordion:hover,
+    .accordion.active {
+      background-color: #d365cc;
+    }
+
+    .icon {
+      font-size: 20px;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    .rotate {
+      transform: rotate(180deg);
+    }
+
+    .panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.3s ease;
+      padding: 0 28px;
+      background-color: #ffe5f2;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .panel.open {
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
+
+    .panel-content {
+      font-size: 16px;
+      padding-bottom: 20px;
+    }
+
+    .faq {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px 30px;
+
+    }
+
+    .items {
+      flex: 1 1 48%;
+      min-width: 300px;
+    }
+
+    footer {
+      background-color: #e586e7;
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    .footer-top .icons a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-top .icons a:hover {
+      color: #ffebf4;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 30px;
+    }
+
+    .Horizontal {
+      flex: 1 1 200px;
+      margin: 15px;
+    }
+
+    .Footer-heading {
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: block;
+      font-size: 18px;
+    }
+
+    .last {
+      text-align: center;
+      padding: 15px;
+      background-color: #d871d8;
+      font-size: 14px;
+    }
+
+     .container {
+            position: relative;
+            width: 90vw; /* Responsive width */
+            max-width: 900px; /* Maximum width for desktop */
+            height: 70vh; /* Responsive height */
+            max-height: 600px; /* Maximum height for desktop */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            margin: 50px auto; /* Margin to prevent touching edges on very small screens */
+        }
+
+        /* Keyframe animations for the concentric rings */
+        @keyframes pulseRing1 {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            50% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(0.8); opacity: 0.5; }
+        }
+
+        @keyframes pulseRing2 {
+            0% { transform: scale(0.7); opacity: 0.6; }
+            50% { transform: scale(0.9); opacity: 0.9; }
+            100% { transform: scale(0.7); opacity: 0.6; }
+        }
+
+        @keyframes pulseRing3 {
+            0% { transform: scale(0.9); opacity: 0.7; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(0.9); opacity: 0.7; }
+        }
+
+        /* Concentric Rings - using pseudo-elements for the outer two */
+        .container::before,
+        .container::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(224, 208, 198, 0.5); /* Base color for the rings */
+            z-index: 1;
+            filter: blur(1px); /* Slight blur for softness */
+        }
+
+        /* Outer ring */
+        .container::before {
+            width: 80%; /* Responsive sizing */
+            height: 80%;
+            max-width: 450px; /* Max size */
+            max-height: 450px;
+            background-color: rgba(224, 208, 198, 0.3); /* Lighter for the outer ring */
+            animation: pulseRing1 4s ease-in-out infinite; /* Apply animation */
+        }
+
+        /* Inner ring */
+        .container::after {
+            width: 60%; /* Responsive sizing */
+            height: 60%;
+            max-width: 300px; /* Max size */
+            max-height: 300px;
+            background-color: rgba(224, 208, 198, 0.5); /* Medium for the inner ring */
+            animation: pulseRing2 4.5s ease-in-out infinite; /* Apply animation */
+        }
+
+        /* Innermost visible ring (center image container) */
+        .center-image-container {
+            width: 40%; /* Responsive sizing */
+            height: 40%;
+            max-width: 200px; /* Max size */
+            max-height: 200px;
+            border-radius: 50%;
+            background-color: rgba(224, 208, 198, 0.7); /* Darker for the innermost ring */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* More prominent shadow */
+            animation: pulseRing3 5s ease-in-out infinite; /* Apply animation */
+        }
+
+        .center-image {
+            width: 75%; /* Responsive size of the center image relative to its container */
+            height: 75%;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05); /* Subtle inner shadow */
+        }
+
+        .content-wrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 3; /* Ensure boxes are above rings initially */
+            /* Using flexbox for initial layout, then absolute for specific positioning */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Space between items when flex-wrapped */
+            padding: 20px; /* Padding for the wrapper itself */
+            box-sizing: border-box;
+        }
+
+        .accordion-item {
+            background-color: #f3ede7; /* Box background color */
+            border: 1px solid #d4c2b9; /* Box border color */
+            border-radius: 20px; /* Rounded corners */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly larger shadow */
+            font-size: 1.1em;
+            color: #5a4b41;
+            width: calc(45% - 20px); /* Approx 2 items per row with gap */
+            max-width: 300px; /* Max width for each item */
+            box-sizing: border-box;
+            overflow: hidden; /* Hide overflow when content is collapsed */
+            transition: all 0.3s ease; /* Smooth transition for box resizing */
+            position: absolute; /* Default to absolute positioning for desktop layout */
+            z-index: 4; /* Default z-index for inactive accordions */
+        }
+
+        .accordion-item.active {
+            z-index: 10; /* Bring active accordion to the front to prevent overlap */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow when active */
+        }
+
+        .accordion-header {
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none; /* Prevent text selection */
+            font-weight: 600; /* Slightly bolder text for header */
+        }
+
+        .accordion-header span {
+            flex-grow: 1;
+        }
+
+        .accordion-icon {
+            margin-left: 15px;
+            color: #8c7b70; /* Color for the plus icon */
+            font-size: 1.2em;
+            transition: transform 0.3s ease; /* Smooth rotation */
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(45deg); /* Rotates plus to an 'X' for open state */
+            color: #b38b6d; /* Change color when active */
+        }
+
+        .accordion-content {
+            padding: 0 25px; /* Adjust padding to match header */
+            max-height: 0; /* Initially hidden */
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out, opacity 0.3s ease-out; /* Smooth slide and fade effect */
+            opacity: 0;
+            line-height: 1.6; /* Improved readability */
+            font-size: 0.95em;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 200px; /* A safe maximum height for typical content, JS will adjust */
+            padding-bottom: 15px; /* Add bottom padding when expanded */
+            opacity: 1;
+        }
+
+        .accordion-content p {
+            margin: 0; /* Remove default paragraph margin */
+        }
+
+
+        /* Desktop Positioning - specific to maintain the circular layout */
+        @media (min-width: 768px) {
+            .accordion-item {
+                width: 280px; /* Fixed width for desktop */
+                margin: 0; /* Remove flex margin for absolute positioning */
+            }
+
+            /* Adjusted positioning to create more space and reduce overlap */
+            .top-left {
+                top: 2%; /* Was 5% */
+                left: 0%;
+            }
+
+            .top-right {
+                top: 2%; /* Was 5% */
+                right: 0%;
+            }
+
+            .middle-left {
+                top: 32%; /* Was 35% */
+                left: -5%; /* Was -2% */
+            }
+
+            .middle-right {
+                top: 32%; /* Was 35% */
+                right: -5%; /* Was -2% */
+            }
+
+            .bottom-left {
+                bottom: 2%; /* Was 5% */
+                left: 0%;
+            }
+
+            .bottom-right {
+                bottom: 2%; /* Was 5% */
+                right: 0%;
+            }
+        }
+
+        /* Tablet Layout */
+        @media (max-width: 767px) and (min-width: 481px) {
+            .container {
+                height: auto; /* Allow container height to adjust */
+                min-height: 100vh; /* Ensure it takes full viewport height */
+                margin: 0;
+                padding: 20px 0;
+                display: block; /* Change to block for vertical stacking */
+            }
+
+            .center-image-container {
+                position: relative; /* Remove absolute positioning */
+                margin: 20px auto 40px auto; /* Center and add margin */
+                width: 150px;
+                height: 150px;
+                max-width: none; /* Override max-width */
+                max-height: none;
+                animation: none; /* Disable animation for smaller screens if it's too distracting */
+            }
+            .center-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            /* Disable ring animations and set static size for clarity on smaller screens */
+            .container::before, .container::after {
+                display: none; /* Hide rings completely */
+            }
+
+            .content-wrapper {
+                position: static; /* Remove absolute positioning */
+                display: flex;
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center items horizontally */
+                padding: 0 15px; /* Adjust padding */
+                height: auto; /* Auto height */
+            }
+
+            .accordion-item {
+                position: static; /* Remove absolute positioning */
+                width: 95%; /* Make items wider for tablets */
+                max-width: 450px; /* Limit max width */
+                margin-bottom: 20px; /* Space between stacked items */
+                transform: none !important; /* Disable any leftover transforms */
+            }
+        }
+
+        /* Mobile Layout */
+        @media (max-width: 480px) {
+            .container {
+                height: auto; /* Allow container height to adjust */
+                min-height: 100vh; /* Ensure it takes full viewport height */
+                margin: 0;
+                padding: 15px 0;
+                display: block;
+            }
+
+            .center-image-container {
+                position: relative;
+                margin: 15px auto 30px auto;
+                width: 120px;
+                height: 120px;
+                max-width: none;
+                max-height: none;
+                animation: none;
+            }
+            .center-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            .container::before, .container::after {
+                display: none; /* Hide rings completely */
+            }
+
+            .content-wrapper {
+                position: static;
+                flex-direction: column;
+                align-items: center;
+                padding: 0 10px;
+                height: auto;
+            }
+
+            .accordion-item {
+                position: static;
+                width: 100%; /* Full width for mobile */
+                margin-bottom: 15px;
+                font-size: 1em; /* Slightly smaller font for mobile */
+                transform: none !important;
+            }
+
+            .accordion-header {
+                padding: 12px 20px;
+            }
+
+            .accordion-content {
+                padding: 0 20px;
+                font-size: 0.9em;
+            }
+
+            .accordion-item.active .accordion-content {
+                padding-bottom: 12px;
+            }
+        }
+
+
+    @media (max-width: 768px) {
+      .faq {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .footer-top,
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+        <div class="center-image-container">
+            <!-- Replace with your actual image path or use a placeholder -->
+            <!-- Placeholder example: https://placehold.co/150x150/e0d0c6/5a4b41?text=Logo -->
+            <img src="https://placehold.co/150x150/e0d0c6/5a4b41?text=Logo" alt="Center Logo" class="center-image" onerror="this.onerror=null;this.src='https://placehold.co/150x150/e0d0c6/5a4b41?text=Logo';">
+        </div>
+        <div class="content-wrapper">
+            <!-- Each accordion-item has a class for its approximate position on desktop -->
+            <div class="accordion-item top-left">
+                <div class="accordion-header">
+                    <span>Comprehensive Virtual Care</span>
+                    <i class="fas fa-plus accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Receive high-quality medical and wellness care from the comfort of your home, offering convenience and accessibility for all your needs.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item top-right">
+                <div class="accordion-header">
+                    <span>Flexible Scheduling</span>
+                    <i class="fas fa-plus accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Book appointments that fit seamlessly into your busy life, with options for various times and days to accommodate your personal schedule.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item middle-left">
+                <div class="accordion-header">
+                    <span>Specialized Perinatal & Postpartum Care</span>
+                    <i class="fas fa-plus accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Dedicated support for expectant and new mothers, focusing on physical recovery, emotional well-being, and newborn care guidance.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item middle-right">
+                <div class="accordion-header">
+                    <span>Holistic Wellness Approach</span>
+                    <i class="fas fa-plus accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Integrating physical, mental, and emotional health, our approach considers all aspects of your well-being for complete and balanced care.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item bottom-left">
+                <div class="accordion-header">
+                    <span>Personalized Treatment Plans</span>
+                    <i class="fas fa-plus accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Tailored health strategies developed specifically for your unique needs and goals, ensuring the most effective and relevant care for you.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item bottom-right">
+                <div class="accordion-header">
+                    <span>Continuous Support & Education</span>
+                    <i class="fas fa-plus accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Beyond appointments, we provide ongoing resources and information to empower you with knowledge for sustained health and well-being.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <div class="faq">
+    <div class="items">
+      <h2 id="Heading">Answers to Common Questions!</h2>
+      <button class="help">Get Help Today</button>
+    </div>
+
+    <div class="items">
+      <button class="accordion">What is the website? <span class="icon">+</span></button>
+      <div class="panel">
+        <div class="panel-content">Our website is a hub for cybersecurity awareness and learning.</div>
+      </div>
+
+      <button class="accordion">How do I sign up? <span class="icon">+</span></button>
+      <div class="panel">
+        <div class="panel-content">You can sign up through the form on our homepage.</div>
+      </div>
+
+      <button class="accordion">Are the courses free? <span class="icon">+</span></button>
+      <div class="panel">
+        <div class="panel-content">Most of our beginner-level courses are free of charge.</div>
+      </div>
+
+      <button class="accordion">How to apply? <span class="icon">+</span></button>
+      <div class="panel">
+        <div class="panel-content">Applications will be shared here and on our official WhatsApp group.</div>
+      </div>
+
+      <button class="accordion">Can I get certified? <span class="icon">+</span></button>
+      <div class="panel">
+        <div class="panel-content">Yes! Certifications are provided upon course completion.</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <span>Connect with us on social media</span>
+      <span class="icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </span>
+    </div>
+    <hr>
+    <div class="footer-bottom">
+      <div class="Horizontal">
+        <span class="Footer-heading">About Us</span>
+        <span>We are a community promoting cybersecurity education in a fun and professional way.</span>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Resources</span>
+        <ul>
+          <li>Blog</li>
+          <li>FAQs</li>
+          <li>Community</li>
+        </ul>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Support</span>
+        <ul>
+          <li>Contact Us</li>
+          <li>Help Center</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Stay Updated</span>
+        <span>Subscribe to our newsletter and never miss an update.</span>
+      </div>
+    </div>
+    <div class="last">
+      <p>&copy; 2025 Written by Ruzal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+
+     document.addEventListener('DOMContentLoaded', () => {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const accordionItem = header.closest('.accordion-item');
+                    const accordionContent = accordionItem.querySelector('.accordion-content');
+                    const accordionIcon = accordionItem.querySelector('.accordion-icon');
+
+                    // Check if this item is already active
+                    const isActive = accordionItem.classList.contains('active');
+
+                    // Close all other open accordions first
+                    accordionHeaders.forEach(otherHeader => {
+                        const otherItem = otherHeader.closest('.accordion-item');
+                        if (otherItem !== accordionItem && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.accordion-content').style.maxHeight = '0';
+                            otherItem.querySelector('.accordion-content').style.paddingBottom = '0';
+                            otherItem.querySelector('.accordion-content').style.opacity = '0';
+                            otherItem.querySelector('.accordion-icon').classList.remove('fa-minus');
+                            otherItem.querySelector('.accordion-icon').classList.add('fa-plus');
+                        }
+                    });
+
+                    // Toggle the clicked accordion item
+                    if (!isActive) {
+                        accordionItem.classList.add('active');
+                        // Set max-height to scrollHeight for smooth expansion
+                        // Add a small buffer to max-height to prevent content cutting off
+                        accordionContent.style.maxHeight = (accordionContent.scrollHeight + 20) + 'px';
+                        accordionContent.style.paddingBottom = '15px'; /* Consistent padding */
+                        accordionContent.style.opacity = '1';
+                        accordionIcon.classList.remove('fa-plus');
+                        accordionIcon.classList.add('fa-minus'); // Change icon to minus
+                    } else {
+                        accordionItem.classList.remove('active');
+                        accordionContent.style.maxHeight = '0';
+                        accordionContent.style.paddingBottom = '0';
+                        accordionContent.style.opacity = '0';
+                        accordionIcon.classList.remove('fa-minus');
+                        accordionIcon.classList.add('fa-plus'); // Change icon back to plus
+                    }
+                });
+            });
+        });
+        
+    const accordions = document.querySelectorAll(".accordion");
+
+    accordions.forEach(acc => {
+      acc.addEventListener("click", function () {
+        const panel = this.nextElementSibling;
+        const icon = this.querySelector(".icon");
+        const isOpen = panel.classList.contains("open");
+
+        if (isOpen) {
+          panel.style.maxHeight = null;
+          panel.classList.remove("open");
+          icon.textContent = "+";
+          icon.classList.remove("rotate");
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          panel.classList.add("open");
+          icon.textContent = "−";
+          icon.classList.add("rotate");
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
