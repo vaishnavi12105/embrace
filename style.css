@@ -13,6 +13,14 @@
   background-size: contain;
 }
 
+.room-link{
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #e15268;
+  font-weight: 600;
+}
+
 .room-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -29,18 +37,12 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease 0.2s, box-shadow 0.3s ease 0.2s;
+  transition: transform 0.2s ease 0.2s, box-shadow 0.2s ease 0.2s;
 }
 
 .room-box:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-.room-box h3 {
-  font-size: 1.5rem;
-  margin-bottom: 12px;
-  color: #d63384;
 }
 
 .room-box img {
@@ -78,7 +80,7 @@
 
 .motherhood-support {
   padding: 15px ;
-  background-color: #ff81c6;
+  background-color: #e37378;
 }
 
 .motherhood-support .container {
@@ -113,7 +115,7 @@
 
 .motherhood-support .contact-btn {
   display: inline-block;
-  background-color: #f05f5f;
+  background-color: #d53d54;
   color: white;
   padding: 12px 24px;
   margin-bottom:5px;
@@ -126,7 +128,7 @@
 }
 
 .motherhood-support .contact-btn:hover {
-  background-color: #ffb9e0;
+  background-color: #fb7fc3;
   color: black;
 }
 
