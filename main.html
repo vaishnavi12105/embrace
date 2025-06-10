@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Postpartum Wellness Center</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="embrace.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./FAQ/faq.css">
+  <style>
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body class="bg-[#E37383]">
+
+  <!-- Top bar -->
+  <div class="bg-[#E37383] text-white text-sm px-4 py-2 flex justify-center md:justify-end gap-4">
+    <div class="flex items-center gap-1">
+       <span class="font-bold"></span>
+    </div>
+    <div class="hidden md:inline"></div>
+    <div></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-white w-full shadow-md px-6 py-4 flex items-center justify-between flex-wrap">
+    <!-- Logo -->
+   <div class="flex items-center gap-2">
+  <img src="./logo.png" alt="Logo" class="h-10 w-10 object-contain" />
+  <span class="font-serif font-bold text-2xl  tracking-wider">Embrace</span>
+</div>
+
+
+    <!-- Nav Links -->
+    <div class="hidden md:flex gap-6 text-[#4b2e2e] font-medium">
+      <div class="relative group cursor-pointer">
+  <span class="font-semibold text-black">About Us</span>
+ 
+  
+  <!-- Dropdown content -->
+  <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
+    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Our Mission</a>
+    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Who We Are</a>
+    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">The Postpartum Difference</a>
+  </div>
+</div>
+
+      <div class="relative group cursor-pointer">
+        <span>What We Treat</span>
+
+        <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
+    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Postpartum Depression</a>
+    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Stress and Emotional Burnout</a>
+    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Birth Trauma and PTSD Treatment</a>
+  </div>
+      </div>
+      <div class="relative group cursor-pointer">
+        <span>Our Rooms</span>
+
+        <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
+    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Loss Room</a>
+    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Hormonal Room</a>
+    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">New Mom Room</a>
+  </div>
+      </div>
+      <div class="relative group cursor-pointer">
+        <span>Connect</span>
+      </div>
+      <div class="relative group cursor-pointer">
+        <span>Your Journal</span>
+      </div>
+    </div>
+
+    
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col md:flex-row w-full h-auto md:h-screen font-serif">
+    
+    <!-- Left Text -->
+    <div class="w-full md:w-1/2 flex flex-col justify-center px-10 py-20 text-white">
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+        Welcome to the <br />
+        Postpartum <br />
+        Wellness Rooms<br />
+      </h1>
+      <ul class="space-y-2 mb-8 text-lg">
+      <li>✔ Specialized Postpartum Mental Health Care</li>
+      <li>✔ Safe Community Spaces</li>
+      <li>✔ Personalized Treatment</li>
+      
+    </ul>
+
+    <div class="flex gap-4">
+      <button class="bg-white text-[#b89685] px-6 py-3 rounded-xl font-semibold">
+        CONTACT US
+      </button>
+      <button class="border border-white px-6 py-3 rounded-xl font-semibold">
+        BOOK A SESSION
+      </button>
+    </div>
+    </div>
+<!-- Right: Image -->
+
+<div class="w-1/2 relative overflow-hidden h-full hidden md:block">
+    <img src="./baby.jpeg"
+         alt="Mother and Baby"
+         class="w-full h-full object-cover"
+         style="clip-path: ellipse(180% 100% at 130% 50%);" />
+  </div>
+
+
+  </section>
+
+  <!-- Our Mission Section -->
+<section class="bg-white text-center py-20 px-6 font-serif text-[#4b2e2e]">
+  <!-- Logo -->
+  <div class="flex justify-center mb-6">
+    <img src="./logo.png" alt="Logo" class="h-20 w-auto" />
+  </div>
+
+  <!-- Heading -->
+  <h2 class="text-4xl font-bold mb-6">Our Mission</h2>
+
+  <!-- Description -->
+  <p class="max-w-3xl mx-auto text-lg leading-relaxed text-gray-700">
+   "At Embrace, we are dedicated to building a nurturing and inclusive space for parents facing the emotional journey of pregnancy and postpartum. Our mission is to ensure that no one feels alone—by offering compassionate care, personalized support, and expert treatment that empowers emotional healing and lasting well-being."
+
+
+  </p>
+
+  <!-- Button -->
+  <div class="mt-10">
+    <a href="#treatments" class="bg-[#B28E83] hover:bg-[#a87d72] text-white font-semibold px-6 py-3 rounded-xl transition">
+      EXPLORE OUR ROOMS
+    </a>
+  </div>
+</section>
+
+<div class="headingvoice">Voices of Healing</div>
+
+  <section class="voice">
+    <div class="allcards">
+      <div class="card1">
+        <img src="https://wallpapercave.com/wp/wp3366590.jpg" alt="Story Image">
+        <p>Hi, I’m Neha. A few years ago, I was diagnosed with endometriosis... <strong>don’t lose hope.</strong></p>
+      </div>
+      <div class="card1">
+        <img src="https://thumbs.dreamstime.com/b/mother-baby-24407153.jpg" alt="Story Image">
+        <p>I’m Radhika, and my journey to motherhood wasn’t easy... <strong>you’re not alone in this.</strong></p>
+      </div>
+      <div class="card1">
+        <img src="https://womensmentalhealth.org/wp-content/uploads/2020/06/GettyImages-mom-and-infant.jpg" alt="Story Image">
+        <p>Hello, I’m Anjali. I’ve struggled with PCOS since my early twenties... <strong>your miracle is waiting for you too.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="treat">
+    <div class="treatinside">
+      <h3>What We Treat</h3>
+      <h1>Personalized Support for Your Mental Health Journey</h1>
+      <p>We provide compassionate care and emotional support to women going through miscarriage or infant loss...</p>
+
+      <div class="point1">
+        <div>Postpartum Depression & Anxiety</div>
+        <div>Birth Trauma & PTSD</div>
+        <div>Postpartum OCD</div>
+      </div>
+
+      <div class="point2">
+        <div>Parenting & Relationship Strategies</div>
+        <div>Personality Disorder</div>
+        <div>Stress & Emotional Burnout</div>
+      </div>
+
+      <div class="point3">
+        <div>Social Isolation</div>
+        <div>Bipolar Disorder</div>
+        <div>Sleep & Fatigue Issues</div>
+        <div>Panic Attacks</div>
+        <div>ADHD</div>
+      </div>
+
+      <div class="point2">
+        <div>Grief and Bereavement</div>
+        <div>Depression</div>
+        <div>Post-Traumatic Stress Disorder</div>
+      </div>
+
+      <div class="point1">
+        <div>Guilt and Self-Blame</div>
+        <div>Relationship Strain</div>
+        <div>Complicated Grief</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="treatmentprocess">
+    <div class="somecontent">
+      <div class="Abovecontent">
+        <h1>How to Start Treatment</h1>
+        <h4>Starting Treatment at the Postpartum Mental Health is a Simple, Four-Step Process:</h4>
+      </div>
+      <div class="buttoncontact">
+        <button class="contact">Contact Us</button>
+      </div>
+    </div>
+
+    <div class="allsteps">
+      <div class="step1">
+        <h3>Request a Call</h3>
+        <p>Fill out our contact form or call us. Our compassionate support team will reach out within 24 hours...</p>
+        <h1>01</h1>
+      </div>
+      <div class="step1">
+        <h3>Initial Assessment</h3>
+        <p>Our licensed professionals assess your mental health needs through a one-on-one consultation...</p>
+        <h1>02</h1>
+      </div>
+      <div class="step1">
+        <h3>Personalized Treatment Plan</h3>
+        <p>Begin therapy, counseling, or medication management based on your unique situation...</p>
+        <h1>03</h1>
+      </div>
+      <div class="step1">
+        <h3>Ongoing Support</h3>
+        <p>We provide continuous mental health care and wellness resources tailored to your needs...</p>
+        <h1>04</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="room-section">
+    <div class="room-container">
+        <!-- Loss Room -->
+        <div class="room-box loss-room">
+        <a href="loss_room.html" class="room-link">Go to Loss Room</a>
+        <p>
+            The Loss Room is a safe, gentle space created for those experiencing the deep grief of miscarriage or stillbirth. We understand that these losses are often invisible to the world but incredibly heavy for the soul. Here, you're not alone.
+
+            You'll find a carefully curated collection of healing resources from expert-led podcasts and educational videos to self-paced guides that help process grief. We've created support group channels where you can connect with others who understand your journey, share stories, and find comfort in solidarity.
+
+            Whether you're navigating silence or seeking answers, the Loss Room is here to hold space for you with compassion, not judgement.
+        </p>
+        </div>
+
+        <!-- Hormonal Room -->
+        <div class="room-box small-box hormonal-room">
+        <a href="#" class="room-link">Hormonal Room</a>
+        <p>
+            Focused on PCOS, PCOD, and hormone-related anxiety, the Hormonal Room gives you access to expert advice, self-care resources, and community support tailored to your body's rhythm.
+        </p>
+        </div>
+
+        <!-- New Mom Room -->
+        <div class="room-box small-box newmom-room">
+        <a href="#" class="room-link">New Mom Room</a>
+        <p>
+            Supporting new mothers through postpartum depression, body image challenges, and partner neglect. Find real stories, emotional care tips, and connections to trusted therapists.
+        </p>
+        </div>
+    </div>
+    </section>
+
+    <section class="motherhood-support">
+    <div class="container">
+        <div class="text-content">
+        <h2>Every struggle is valid. Every feeling is welcome.</h2>
+        <p>
+            Women face a wide range of emotional and physical challenges from the heartbreak of miscarriage and stillbirth to the exhausting reality of living with PCOS or PCOD. These experiences often bring silent pain, stress, and confusion, made worse by the pressure to “stay strong.” It's okay to feel overwhelmed. It's okay to not be okay. Whether you're grieving, navigating hormonal struggles, or just feeling lost in it all you're not alone. So many women walk this road quietly, but that silence doesn't have to continue. We're here to hold space for your healing with compassion, with care, and without judgment. You deserve support that sees the whole you, beyond diagnoses or labels. Because your mental health matters. Your emotions are valid. And this space exists to remind you: we see you, we hear you, and we're here to help you heal.
+        </p>
+        <a href="#contact" class="contact-btn">Get Help Today</a>
+        </div>
+        <div class="video-content">
+        <video class="circle-video" autoplay muted loop>
+            <source src="motherhood_support_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        </div>
+    </div>
+    </section>
+
+    <div class="upper">
+        <h3 style="font-size: 40px; text-align: center; padding:20px; font-weight: 500;">Why choose Embrace?</h3>
+
+        <div class="containerr">
+    <br/>
+        <div class="center-image-container">
+           
+            <img src="logo.png" alt="Center Logo" class="center-image" >
+        </div>
+        <div class="content-wrapper">
+            
+            <div class="accordion-item top-left">
+                <div class="accordion-header">
+                    <span>Comprehensive Virtual Care</span>
+                    <i class="fas fa-plus accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Receive high-quality medical and wellness care from the comfort of your home, offering convenience and accessibility for all your needs.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item top-right">
+                <div class="accordion-header">
+                    <span>Flexible Scheduling</span>
+                    <i class="fas fa-plus accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Book appointments that fit seamlessly into your busy life, with options for various times and days to accommodate your personal schedule.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item middle-left">
+                <div class="accordion-header">
+                    <span>Specialized Perinatal & Postpartum Care</span>
+                    <i class="fas fa-plus accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Dedicated support for expectant and new mothers, focusing on physical recovery, emotional well-being, and newborn care guidance.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item middle-right">
+                <div class="accordion-header">
+                    <span>Holistic Wellness Approach</span>
+                    <i class="fas fa-plus accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Integrating physical, mental, and emotional health, our approach considers all aspects of your well-being for complete and balanced care.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item bottom-left">
+                <div class="accordion-header">
+                    <span>Personalized Treatment Plans</span>
+                    <i class="fas fa-plus accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Tailored health strategies developed specifically for your unique needs and goals, ensuring the most effective and relevant care for you.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item bottom-right">
+                <div class="accordion-header">
+                    <span>Continuous Support & Education</span>
+                    <i class="fas fa-plus accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Beyond appointments, we provide ongoing resources and information to empower you with knowledge for sustained health and well-being.</p>
+                </div>
+            </div>
+        </div>
+    </div><br/>
+
+    </div>
+
+  <div class="faq">
+    <div class="items">
+      <h2 id="Heading">Answers to Common Questions!</h2>
+      <button class="help">Get Help Today</button>
+    </div>
+
+    <div class="items">
+      <button class="accordion">What is the website? <span class="icon">+</span></button>
+      <div class="panel">
+        <div class="panel-content">Our website is a hub for cybersecurity awareness and learning.</div>
+      </div>
+
+      <button class="accordion">How do I sign up? <span class="icon">+</span></button>
+      <div class="panel">
+        <div class="panel-content">You can sign up through the form on our homepage.</div>
+      </div>
+
+      <button class="accordion">Are the courses free? <span class="icon">+</span></button>
+      <div class="panel">
+        <div class="panel-content">Most of our beginner-level courses are free of charge.</div>
+      </div>
+
+      <button class="accordion">How to apply? <span class="icon">+</span></button>
+      <div class="panel">
+        <div class="panel-content">Applications will be shared here and on our official WhatsApp group.</div>
+      </div>
+
+      <button class="accordion">Can I get certified? <span class="icon">+</span></button>
+      <div class="panel">
+        <div class="panel-content">Yes! Certifications are provided upon course completion.</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <span>Connect with us on social media</span>
+      <span class="icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </span>
+    </div>
+    <hr>
+    <div class="footer-bottom">
+      <div class="Horizontal">
+        <span class="Footer-heading">About Us</span>
+        <span>We are a community promoting cybersecurity education in a fun and professional way.</span>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Resources</span>
+        <ul>
+          <li>Blog</li>
+          <li>FAQs</li>
+          <li>Community</li>
+        </ul>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Support</span>
+        <ul>
+          <li>Contact Us</li>
+          <li>Help Center</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Stay Updated</span>
+        <span>Subscribe to our newsletter and never miss an update.</span>
+      </div>
+    </div>
+    <div class="last">
+      <p>&copy; 2025 Written by Ruzal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./FAQ/faq.js"></script>
+
+    
+
+
+
+
+</body>
+</html>

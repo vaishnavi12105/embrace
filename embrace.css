@@ -1,443 +1,181 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:sans-serif;
-}
-
-
-
-.headingvoice{
-    text-align:center;
-    font-family:serif;
-    font-size:40px;
-    padding-top:20px;
-    padding-bottom:10px;
-}
-
-
-
-.voice{
-    height:480px;
-    background:#E37383;
-    
-    
-}
-.voice h1{
-    text-align:center;
-    font-family:sans-serif;
-    
-}
-.allcards{
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
-    column-gap:20px;
-    margin:0 auto;
-    padding:30px 0px;
-    width:90%;
-    
-    
-    
-}
-
-.card1{
-    border-radius:5%;
-    border:2px solid white;
-    overflow:hidden;
-    text-align: center;
-    background:white;     
-    
-    margin:10px 10px;
-    box-shadow:0 4px 8px rgba(0,0,0,1.5);
-    height:400px;
-    
-    
-}
-
-.card1 img{
-    width:70%;
-    height:200px;
-    object-fit:cover;
-    padding:20px 80px;
-     
-}
-
-.card1 p{
-    
-    font-size:14.5px;
-    font-family:unset
-    
-}
-    
-
-.treat{
-    margin:50px 0;
-    width:100%;
-    height:600px;
-}
-
-.treatinside{
-    background:url(https://img.freepik.com/premium-photo/heartwarming-illustration-mother-breastfeeding-baby-soft-sandy-tones-tender-care-newborn_754092-1135.jpg);
-    background-repeat: no-repeat;
-    background-position: 0cm;
-    background-size:100%;
-    width:100%;
-    height:550px;
-    color:white;
-    text-align:center;
-
-}
-
-.treatinside h3{
-    padding-top:30px;
-    font-weight:bolder;
-    font-size:20px;
-
-
-}
-
-.treatinside h1{
-    padding-top:10px;
-    font-size:30px;
-}
-
-.treatinside p{
-    padding-top:15px;
-    padding-left:150px;
-    padding-right:150px;
-    font-size:14px;
-}
-
-.point1{
-    padding-top:30px;
-    display:flex;
-    align-items:center;
-    
-    
-    
-    
-    
-    
-
-}
-.one{
-    width:300px;
-    height:40px;
-    background:#E37383;
-    text-align:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:20px;
-    border:3px solid white;
-    margin-left:400px;
-    cursor:pointer;
-    font-weight:bolder;
-    
-
-  
-    
-
-
-}
-.two{
-    width:200px;
-    height:40px;
-    background:#E37383;
-    text-align:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:20px;
-    border:3px solid white;
-    margin-left:20px;
-    cursor:pointer;
-    font-weight:bolder;
-    
-    
-
-
-}
-.three{
-    width:200px;
-    height:40px;
-    background:#E37383;
-    text-align:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:20px;
-    border:3px solid white;
-    margin-left:20px;
-    cursor:pointer;
-    font-weight:bolder;
-    
-  
-    
-
-
-}
-.point2{
-    padding-top:30px;
-    display:flex;
-    align-items:center;
-    
-    
-     
-
-}
-
-.four{
-    width:300px;
-    height:40px;
-    background:#E37383;
-    text-align:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:20px;
-    border:3px solid white;
-    margin-left:330px;
-    cursor:pointer;
-    font-weight:bolder;
-    
-
-}
-
-.five{
-    width:250px;
-    height:40px;
-    background:#E37383;
-    text-align:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:20px;
-    border:3px solid white;
-    margin-left:20px;
-    cursor:pointer;
-    font-weight:bolder;
-    
-
-
-}
-.six{
-    width:300px;
-    height:40px;
-    background:#E37383;
-    text-align:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:20px;
-    border:3px solid white;
-    margin-left:20px;
-    cursor:pointer;
-    font-weight:bolder;
-    
-
-  
-    
-
-
-}
-
-.point3{
-    padding-top:30px;
-    display:flex;
-    align-items:center;
-    padding-left:100px;
-    margin-left:100px;
-    
-
-}
-
-.seven{
-    width:250px;
-    height:40px;
-    background:#E37383;
-    text-align:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:20px;
-    border:3px solid white;
-    cursor:pointer;
-    font-weight:bolder;
-    
-
-}
-
-.eight{
-    width:200px;
-    height:40px;
-    background:#E37383;
-    text-align:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:20px;
-    border:3px solid white;
-    margin-left:20px;
-    cursor:pointer;
-    font-weight:bolder;
-
-}
-
-.nine{
-    width:250px;
-    height:40px;
-    background:#E37383;
-    text-align:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:20px;
-    border:3px solid white;
-    margin-left:20px;
-    cursor:pointer;
-    font-weight:bolder;
-
-}
-
-.ten{
-    width:200px;
-    height:40px;
-    background:#E37383;
-    text-align:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:20px;
-    border:3px solid white;
-    margin-left:20px;
-    cursor:pointer;
-    font-weight:bolder;
-
-}
-
-.eleven{
-    width:200px;
-    height:40px;
-    background:#E37383;
-    text-align:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:20px;
-    border:3px solid white;
-    margin-left:20px;
-    cursor:pointer;
-    font-weight:bolder;
-    
-
-}
-
-.allsteps{
-    background:#E37383;
-
-}
-.treatmentprocess{
-    background:rgb(255, 255, 255);
-    width:100%;
-    height:900px;
-    margin-top:100px;
-    
-
-}
-
-.somecontent{
-    text-align:left;
-    margin:20px 20px;
-    display:flex;
-    
-}
-
-.somecontent h1{
-    color:black;
-    font-family:serif;
-    font-size:40px;
-    position:left;
-}
-
-.somecontent h4{
-    color:black;
-    padding-top:10px;
-    font-size:15px;
-    
-}
-.somecontent p{
-    color:black;
-    
-    
-}
-
-.buttoncontact{
-    margin-left:100px;
-    margin-top:30px;
-    
-    
-
-}
-
-.contact{
-    background:#7b303c;
-    color:white;
-    width:150px;
-    height:50px;
-
-}
-.Abovecontent h4{
-   
-    width:800px;
-
-}
-
-.allsteps{
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
-    column-gap:0px;
-    text-align: left;
-    justify-content: left;
-    background:white;
-    padding: 0px 10px;
-
-    
-
-}
-
-.step1{
-    
-    padding-left:20px;
-    width:350px;
-    height:260;
-    border:2px solid black;
-    background:#E37383;
-
-    
-}
-.step1 p{
-    color:black;
-    padding-left:6px;
-    padding-top:10px;
-    padding-bottom:10px;
-    padding-right: 30px;
-    
-    
-
-}
-.step1 h3{
-    color:black;
-    font-size:25px;
-    font-family:serif;
-    padding-top:10px;
-    
-
-}
-
-.step1 h1{
-    color:black;
-    padding-bottom:px;
-
-} 
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    } -->
+
+    .headingvoice {
+      text-align: center;
+      font-size: 2.5rem;
+      padding: 2rem 1rem 1rem;
+      font-family: 'Georgia', serif;
+      color: #E37383;
+    }
+
+    .voice {
+      background: #E37383;
+      padding: 2rem 0;
+    }
+
+    .allcards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card1 {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      padding-bottom: 1rem;
+    }
+
+    .card1 img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card1 p {
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .treatinside {
+      background: url('https://img.freepik.com/premium-photo/heartwarming-illustration-mother-breastfeeding-baby-soft-sandy-tones-tender-care-newborn_754092-1135.jpg') no-repeat center/cover;
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .treatinside h3 {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .treatinside h1 {
+      font-size: 2rem;
+      margin: 1rem 0;
+    }
+
+    .treatinside p {
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      font-size: 1rem;
+    }
+
+    .point1,
+    .point2,
+    .point3 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .point1 div,
+    .point2 div,
+    .point3 div {
+      padding: 0.75rem 1.5rem;
+      background: #E37383;
+      border: 2px solid white;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .treatmentprocess {
+      background: #fff;
+      padding: 4rem 2rem;
+    }
+
+    .somecontent {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .Abovecontent h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .Abovecontent h4 {
+      font-size: 1rem;
+      max-width: 700px;
+    }
+
+    .contact {
+      background: #7b303c;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .allsteps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .step1 {
+      background: #E37383;
+      border: 2px solid #000;
+      padding: 1rem;
+      border-radius: 12px;
+      color: #000;
+    }
+
+    .step1 h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .step1 p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .step1 h1 {
+      font-size: 2.5rem;
+      text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      .somecontent {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
+      .treatinside p,
+      .Abovecontent h4 {
+        padding: 0 1rem;
+      }
+    }
+
+
 

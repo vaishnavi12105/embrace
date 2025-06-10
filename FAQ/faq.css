@@ -1,14 +1,4 @@
-* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff0f8;
-      color: #333;
-    }
 
     .items{
         margin: auto 0px;
@@ -92,6 +82,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       padding: 20px 30px;
+      background-color: #f3ede7;
 
     }
 
@@ -151,10 +142,10 @@
     }
 
     .upper{
-      background-color:#E37383;
+      background-color:#ffffff;
     }
 
-     .container {
+     .containerr{
             position: relative;
             width: 90vw; 
             max-width: 900px; 
@@ -165,6 +156,7 @@
             align-items: center;
             background-color: transparent;
             margin: 50px auto; 
+            margin-top:10px;
         }
 
         @keyframes pulseRing1 {
@@ -185,8 +177,8 @@
             100% { transform: scale(0.9); opacity: 0.7; }
         }
 
-        .container::before,
-        .container::after {
+        .containerr::before,
+        .containerr::after {
             content: '';
             position: absolute;
             border-radius: 50%;
@@ -196,7 +188,7 @@
         }
 
         
-        .container::before {
+        .containerr::before {
             width: 80%; 
             height: 80%;
             max-width: 450px; 
@@ -205,7 +197,7 @@
             animation: pulseRing1 4s ease-in-out infinite; 
         }
 
-        .container::after {
+        .containerr::after {
             width: 60%; 
             height: 60%;
             max-width: 300px; 
@@ -356,7 +348,7 @@
         }
 
         @media (max-width: 767px) and (min-width: 481px) {
-            .container {
+            .containerr {
                 height: auto; 
                 min-height: 100vh; 
                 margin: 0;
@@ -378,7 +370,7 @@
                 height: 120px;
             }
 
-            .container::before, .container::after {
+            .containerr::before, .containerr::after {
                 display: none;
             }
 
@@ -401,7 +393,7 @@
         }
 
         @media (max-width: 480px) {
-            .container {
+            .containerr {
                 height: auto; 
                 min-height: 100vh; 
                 margin: 0;
@@ -423,7 +415,7 @@
                 height: 100px;
             }
 
-            .container::before, .container::after {
+            .containerr::before, .containerr::after {
                 display: none; 
             }
 
