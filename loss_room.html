@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body class="bg-[#E37383]">
+
+  <!-- Sticky Navbar -->
+  <div class="sticky top-0 z-50 bg-white shadow-md">
+    <!-- Top bar -->
+    <div class="bg-[#E37383] text-white text-sm px-4 py-2 flex justify-center md:justify-end gap-4">
+      <div class="flex items-center gap-1">
+         <span class="font-bold"></span>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="w-full px-6 py-4 flex items-center justify-between flex-wrap">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img src="./logo.png" alt="Logo" class="h-10 w-10 object-contain" />
+        <span class="font-serif font-bold text-2xl tracking-wider">Embrace</span>
+      </div>
+
+      <!-- Nav Links -->
+      <div class="hidden md:flex gap-6 text-[#4b2e2e] font-medium">
+        <div class="relative group cursor-pointer">
+          <span class="font-semibold text-black">About Us</span>
+          <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
+            <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Our Mission</a>
+            <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Who We Are</a>
+            <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">The Postpartum Difference</a>
+          </div>
+        </div>
+
+        <div class="relative group cursor-pointer">
+          <span>What We Treat</span>
+          <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
+            <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Postpartum Depression</a>
+            <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Stress and Emotional Burnout</a>
+            <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Birth Trauma and PTSD Treatment</a>
+          </div>
+        </div>
+
+        <div class="relative group cursor-pointer">
+          <span>Our Rooms</span>
+          <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
+            <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Loss Room</a>
+            <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Hormonal Room</a>
+            <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">New Mom Room</a>
+          </div>
+        </div>
+
+        <div class="relative group cursor-pointer">
+          <span>Connect</span>
+        </div>
+
+        <div class="relative group cursor-pointer">
+          <span>Your Journal</span>
+        </div>
+      </div>
+    </nav>
+  </div>
+    <section class="loss-room-section">
+        <div class="quote-box">
+            <p class="loss-quote">You are welcome here. Everything you're feeling is valid. This is your safe space to begin healing.</p>
+        </div>
+
+        <div class="resource-intro">
+            <p>
+            Explore a verified selection of articles, podcasts, books, and videos designed to support you on your journey of grief and healing. All resources are carefully chosen for their relevance and helpfulness.
+            </p>
+        </div>
+
+        <div class="resource-tabs">
+            <input type="radio" name="tabset" id="tab-articles" checked>
+            <label for="tab-articles" class="tab-label">Articles</label>
+
+            <input type="radio" name="tabset" id="tab-podcasts">
+            <label for="tab-podcasts" class="tab-label">Podcasts</label>
+
+            <input type="radio" name="tabset" id="tab-books">
+            <label for="tab-books" class="tab-label">Books</label>
+
+            <input type="radio" name="tabset" id="tab-videos">
+            <label for="tab-videos" class="tab-label">Videos</label>
+
+            <div class="tab-slider"></div>
+        </div>
+
+        <div class="articles-content">
+            <div class="resource-box">
+            <img src="article-image1.jpg" alt="Grief Education">
+            <h5>Grief Education</h5>
+            <h3>Understanding Grief After Loss</h3>
+            <p>Learn about the emotional journey and find clarity during hard times.</p>
+            </div>
+            <div class="resource-box">
+            <img src="article-image2.jpg" alt="Self Help">
+            <h5>Self Help</h5>
+            <h3>Coping Strategies for Difficult Days</h3>
+            <p>Discover practical tools to ease daily emotional stress.</p>
+            </div>
+            <div class="resource-box">
+            <img src="article-image3.jpg" alt="Support Others">
+            <h5>Support Others</h5>
+            <h3>Supporting a Loved One Through Loss</h3>
+            <p>Guidance for being there when someone else is grieving.</p>
+            </div>
+            
+        </div>
+
+        <div class="podcasts-content">
+            <div class="podcast-box">
+                <h3 class="podcast-title">The Other Mothers</h3>
+                <p class="podcast-description">This podcast, hosted by Teddy's Wish patrons Caro Tasker and Elle Wright, along with Co-Founder Jen Reid, features stories of baby loss and journeys to life after loss, along with guest speakers.</p>
+            </div>
+
+            <div class="podcast-box">
+                <h3 class="podcast-title">The Parent Hood Podcast</h3>
+                <p class="podcast-description">Hosted by Marina Fogle, this podcast features conversations about supporting grieving parents, including insights from Teddy's Wish and founder of Child Bereavement UK, Jenni Thomas.</p>
+            </div>
+
+            <div class="podcast-box">
+                <h3 class="podcast-title">Still A Part of Us</h3>
+                <p class="podcast-description">This podcast is a platform for parents to share their birth stories of children who were stillborn or died in infancy.</p>
+            </div>
+        </div>
+
+        
+
+</section>
+
+
+</body>
+</html>
