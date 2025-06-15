@@ -179,7 +179,7 @@
   line-height: 1.6;
   text-align:center;
   font-weight: 500;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 
 body {
@@ -220,10 +220,33 @@ body {
   line-height: 1.4;
 }
 
+.fancy-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0.8rem 0 0.8rem;
+  font-size: 1.5rem;
+  color: #e15268; /* soft pink, change as needed */
+  gap: 0.5rem;
+}
+
+.fancy-divider .line {
+  flex: 1;
+  height: 3px;
+  background-color: #e15268;
+  opacity: 0.6;
+}
+
+.fancy-divider .symbol {
+  font-size: 1.5rem;
+  transform: scaleX(1.5);
+  line-height: 1;
+}
+
 .resource-heading{
-  padding: 2rem 0 0 0;
+  padding: 1rem 0 0 0;
   font-family: 'Playfair Display', serif;
-  font-size: 1.75rem;
+  font-size: 2.2rem;
   color: #e06174;
   margin-bottom: 1rem;
   text-align: center;
@@ -278,6 +301,7 @@ body {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding-bottom: 1.5rem;
 }
 
 .grid.active {
@@ -414,7 +438,7 @@ body {
 }
 
 .healing-new-button {
-  background-color: #e6cfc4;
+  background-color: #e9c8b9;
   color: #5c3c36;
   font-weight: 600;
   padding: 0.75rem 1.75rem;
@@ -446,7 +470,7 @@ body {
 .story-box {
   background-color: #fff;
   border-radius: 1.25rem;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   padding: 2rem;
   margin: 0 auto 2rem auto;
   max-width: 1200px;
