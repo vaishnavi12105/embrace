@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Postpartum Wellness Center</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght%40700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./FAQ/faq.css">
+  <style>
+   
+    html, body {
+      height: 100%; 
+      overflow-x: hidden; 
+      overflow-y: auto; 
+    }
+
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000; 
+      background-color: white; 
+    }
+
+   
+    .dropdown-menu {
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+      pointer-events: none; 
+      visibility: hidden; 
+    }
+
+    .dropdown-menu.active,
+    .group:hover .dropdown-menu { 
+      opacity: 1;
+      transform: scaleY(1);
+      pointer-events: auto; 
+      visibility: visible; 
+    }
+
+    
+    .dropdown-toggle.active {
+      color: #000; 
+
+    }
+  </style>
+</head>
+<body class="bg-[#E37383]">
+
+  <div class="bg-[#E37383] text-white text-sm px-4 py-2 flex justify-center md:justify-end gap-4">
+    <div class="flex items-center gap-1">
+       <span class="font-bold"></span>
+    </div>
+    <div class="hidden md:inline"></div>
+    <div></div>
+  </div>
+
+  <nav class="bg-white w-full shadow-md px-6 py-4 flex items-center justify-between flex-wrap sticky-nav">
+    <div class="flex items-center gap-2">
+      <img src="./logo.png" alt="Logo" class="h-10 w-10 object-contain" />
+      <span class="font-serif font-bold text-2xl tracking-wider">Embrace</span>
+    </div>
+
+    <div class="hidden md:flex gap-6 text-[#4b2e2e] font-medium">
+      <div class="relative group cursor-pointer">
+        <span class="font-semibold text-black flex items-center dropdown-toggle" data-dropdown-target="aboutUsDropdown">About Us <span class="ml-1">&#9662;</span></span>
+        
+        <div id="aboutUsDropdown" class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md dropdown-menu z-50">
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Our Mission</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Who We Are</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">The Postpartum Difference</a>
+        </div>
+      </div>
+
+      <div class="relative group cursor-pointer">
+        <span class="flex items-center dropdown-toggle" data-dropdown-target="whatWeTreatDropdown">What We Treat <span class="ml-1">&#9662;</span></span>
+
+        <div id="whatWeTreatDropdown" class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md dropdown-menu z-50">
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Postpartum Depression</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Stress and Emotional Burnout</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Birth Trauma and PTSD Treatment</a>
+        </div>
+      </div>
+
+      <div class="relative group cursor-pointer">
+        <span class="flex items-center dropdown-toggle" data-dropdown-target="ourRoomsDropdown">Our Rooms <span class="ml-1">&#9662;</span></span>
+
+        <div id="ourRoomsDropdown" class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md dropdown-menu z-50">
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Loss Room</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Hormonal Room</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">New Mom Room</a>
+        </div>
+      </div>
+
+      <div class="relative group cursor-pointer">
+        <span>Connect</span>
+      </div>
+      <div class="relative group cursor-pointer">
+        <span>Your Journal</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Postpartum Treatment Section with Blurred Background -->
+<section class="relative bg-[#FFB6C1] text-white py-20 px-6 md:px-24 lg:px-32 overflow-hidden">
+  <!-- Background Image with Blur -->
+  <div class="absolute inset-0 z-0">
+    <img src="./bg.jpeg" alt="Background" class="w-full h-full object-cover blur-xl opacity-60" />
+    <div class="absolute inset-0 bg-[#ffecf2]/50"></div> <!-- Optional overlay for contrast -->
+  </div>
+
+  <!-- Foreground Content -->
+  <div class="relative z-10 max-w-4xl mx-auto">
+    <h2 class="text-black text-4xl md:text-6xl font-serif font-bold mb-8 leading-tight">
+      Healing from Emotional Overload
+    </h2>
+    <p class="text-black text-lg md:text-xl leading-relaxed mb-8">
+      Postpartum recovery challenges stress-free mothers to such an extent that it severely affects their mental and physical health. 
+      The crucial nature of obtaining appropriate care stands because every new mother requires help with postpartum fatigue and seeks postnatal emotional assistance. 
+      Maternal burnout recovery needs evidence-based support consisting of postpartum mental health treatment, counseling services, and specialized assistance for postpartum stress.
+    </p>
+    <p class="text-black text-lg md:text-xl leading-relaxed mb-8">
+      Postpartum Mental Health provides dedicated care and helps in coping with postpartum stress, the recovery of energy, and emotional stabilization. 
+      Linking with expert postpartum depression services and tested postpartum stress control methods ensures you can overcome these tough times without being alone. 
+      You can <span class="text-[#b89685] italic">contact us</span> now for information about postpartum mental health resources at the start of your healing process that leads to emotional strength.
+    </p>
+    <div class="flex flex-wrap gap-4 mt-6">
+      <button class="bg-white text-[#5e443f] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-gray-100 transition">
+        CONTACT US
+      </button>
+      <button class="bg-[#d4b2a6] text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-[#c8a69a] transition">
+        VERIFY INSURANCE
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Full-Width Stress & Emotional Burnout Section -->
+<section class="w-full bg-white py-16 px-4">
+  <div class="w-full max-w-7xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold heading-font text-[#2e2e2e] mb-8">
+      What Is Stress & Emotional Burnout?
+    </h2>
+    <p class="text-lg md:text-xl mb-4 text-[#2e2e2e]">
+      The body uses stress as a natural defense mechanism, which turns into emotional burnout when it exists for a long period. A study reveals physical health stress impacts 77% of the population, and the World Health Organization acknowledges Burnout Syndrome as an authentic occupational condition.
+    </p>
+    <p class="text-lg md:text-xl mb-4 text-[#2e2e2e]">
+      Stress levels and emotional burnout frequently reach overwhelming heights during a woman’s first postpartum experiences. Scientific data shows that postpartum distress affects 80% of mothers, and 
+      <span class="text-[#c4a18d]">postpartum depression</span> or 
+      <span class="text-[#c4a18d]">anxiety</span> develops in 1 out of 5 new mothers. Grasping ways to control postpartum anxiety, 
+      <span class="text-[#c4a18d]">postpartum fatigue</span>, and providing emotional support throughout the postnatal period remains vital for maternal health maintenance.
+    </p>
+    <p class="text-lg md:text-xl mb-8 text-[#2e2e2e]">
+      Most women fail to get adequate postpartum mental health therapy and counseling, which leads them to suffer in secrecy before developing maternal burnout. Professional postpartum depression support will create essential recovery outcomes that benefit the mother and her child.
+    </p>
+    <a href="#" class="inline-block bg-[#b89683] hover:bg-[#a88574] text-white font-bold py-3 px-8 rounded-xl transition-all duration-300">
+      REACH OUT TODAY!
+    </a>
+  </div>
+</section>
+
+<!-- Common Stress & Emotional Burnout Symptoms -->
+<section class="w-full bg-[#E37383] text-white py-16 px-6 md:px-12">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    
+    <div class="w-full max-w-md rounded-xl overflow-hidden shadow-lg mx-auto">
+  <img src="./pic.jpg" alt="Mother and child" class="w-full h-auto object-cover rounded-xl">
+</div>
+
+
+    <!-- Content -->
+    <div>
+      <h2 class="text-4xl font-bold mb-6 leading-snug">
+        Common Stress &<br />Emotional Burnout Symptoms
+      </h2>
+      <p class="text-lg mb-4">
+        Emotional burnout and stress bring different forms of presentation that impact both body and mind.
+        New mothers should learn to recognize early signs since effective treatment relies on early detection.
+        Several familiar symptoms typically emerge in people experiencing these conditions:
+      </p>
+
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-base mt-6">
+        <li class="flex items-start gap-2"><span class="text-[#d1a188] text-xl">•</span> Feeling constantly drained, even after rest.</li>
+        <li class="flex items-start gap-2"><span class="text-[#d1a188] text-xl">•</span> Persistent worry, racing thoughts, and restlessness.</li>
+        <li class="flex items-start gap-2"><span class="text-[#d1a188] text-xl">•</span> Difficulty falling or staying asleep, or excessive sleepiness.</li>
+        <li class="flex items-start gap-2"><span class="text-[#d1a188] text-xl">•</span> Unexplained headaches, muscle tension, or digestive issues.</li>
+        <li class="flex items-start gap-2"><span class="text-[#d1a188] text-xl">•</span> Increased frustration, anger, or emotional sensitivity.</li>
+        <li class="flex items-start gap-2"><span class="text-[#d1a188] text-xl">•</span> Feeling detached from responsibilities, work, or relationships.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Causes & Risk Factors Section -->
+<section class="bg-white py-20 px-6 text-[#2e2e2e]">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
+      Stress & Emotional Burnout <br /> Causes & Risk Factors
+    </h2>
+
+    <div class="flex flex-col lg:flex-row gap-8">
+      <!-- Common Causes -->
+      <div class="bg-[#DB8780] text-white rounded-2xl p-6 flex-1">
+        <h3 class="text-black text-2xl font-bold mb-4">Common Causes:</h3>
+        <ul class="space-y-6">
+          <li class="flex items-start gap-3">
+            <span class="text-xl">✔</span>
+            <p>Chronic occupational responsibilities, domestic obligations, and monetary concerns beyond personal management capacity.</p>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-xl">✔</span>
+            <p>An inadequate amount of rest creates higher levels of stress, together with anxiety and emotional instability.</p>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-xl">✔</span>
+            <p>Looking after a newborn while recovering physically creates excessive stress during this period.</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Risk Factors -->
+      <div class="bg-[#DB8780] text-white rounded-2xl p-6 flex-1">
+        <h3 class="text-black text-2xl font-bold mb-4">Risk Factors:</h3>
+        <ul class="space-y-6">
+          <li class="flex items-start gap-3">
+            <span class="text-xl">✔</span>
+            <p>The intense physical and emotional pressures that come from new motherhood often create too much burden for a mother to handle postpartum stress effectively.</p>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-xl">✔</span>
+            <p>Fluctuations in hormones after childbirth can contribute to managing postpartum anxiety and mood imbalances.</p>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-xl">✔</span>
+            <p>Difficult labor, premature birth, or medical issues can increase emotional strain.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- When to Seek Help Section -->
+<section class="bg-[#ffecf2] py-20 px-6 md:px-12 text-[#4b2e2e]">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold font-serif mb-8">
+      When Should You Seek Help?
+    </h2>
+    <p class="text-lg md:text-xl mb-6">
+      While it's normal to feel overwhelmed after childbirth, ongoing emotional distress should not be ignored. 
+      If you or a loved one experiences symptoms that affect daily functioning or emotional well-being, it’s important to seek professional guidance.
+    </p>
+
+    <div class="grid gap-8 md:grid-cols-3 text-left mt-12">
+      <div class="bg-white rounded-2xl shadow-lg p-6">
+        <h3 class="text-xl font-semibold mb-3">Persistent Sadness</h3>
+        <p class="text-base">Feelings of emptiness, sadness, or hopelessness lasting more than two weeks may indicate depression.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-lg p-6">
+        <h3 class="text-xl font-semibold mb-3">Loss of Interest</h3>
+        <p class="text-base">Lack of joy or interest in activities you once enjoyed can be a sign of emotional burnout or depression.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-lg p-6">
+        <h3 class="text-xl font-semibold mb-3">Struggles with Bonding</h3>
+        <p class="text-base">Feeling disconnected from your baby or struggling to bond may be a result of postpartum emotional strain.</p>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <a href="#contact" class="inline-block bg-[#E37383] hover:bg-[#a87f6a] text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300">
+        TALK TO A COUNSELOR
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="bg-[#fffaf9] py-20 px-6 md:px-12">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+    <!-- Left Column -->
+    <div>
+      <h2 class="text-4xl md:text-5xl font-bold font-serif text-[#3a2a26] mb-6">
+        Stress & Emotional Burnout <br /> FAQs
+      </h2>
+      <a href="#contact" class="inline-block bg-[#E37383] hover:bg-[#a47b6e] text-white font-semibold px-6 py-4 rounded-xl mt-6">
+        GET IN TOUCH TO KNOW MORE!
+      </a>
+    </div>
+
+    <!-- Right Column (Accordion) -->
+    <div class="space-y-4">
+      <!-- FAQ Item 1 -->
+      <details class="border-b border-[#3a2a26] pb-4 group">
+        <summary class="cursor-pointer text-lg font-medium text-[#3a2a26] flex justify-between items-center">
+          What causes stress and burnout in new mothers?
+          <span class="text-2xl transform group-open:rotate-45 transition-transform duration-200">＋</span>
+        </summary>
+        <p class="mt-3 text-[#4b2e2e] text-base">
+          Stress and burnout can stem from sleep deprivation, hormonal changes, lack of support, unrealistic expectations, and the pressure to balance childcare with other responsibilities.
+        </p>
+      </details>
+
+      <!-- FAQ Item 2 -->
+      <details class="border-b border-[#3a2a26] pb-4 group">
+        <summary class="cursor-pointer text-lg font-medium text-[#3a2a26] flex justify-between items-center">
+          How can I tell if I’m experiencing emotional burnout?
+          <span class="text-2xl transform group-open:rotate-45 transition-transform duration-200">＋</span>
+        </summary>
+        <p class="mt-3 text-[#4b2e2e] text-base">
+          Signs include chronic fatigue, irritability, emotional numbness, lack of motivation, trouble sleeping, and feeling detached from your baby or surroundings.
+        </p>
+      </details>
+
+      <!-- FAQ Item 3 -->
+      <details class="border-b border-[#3a2a26] pb-4 group">
+        <summary class="cursor-pointer text-lg font-medium text-[#3a2a26] flex justify-between items-center">
+          What are the best strategies to manage postpartum stress?
+          <span class="text-2xl transform group-open:rotate-45 transition-transform duration-200">＋</span>
+        </summary>
+        <p class="mt-3 text-[#4b2e2e] text-base">
+          Prioritize self-care, set realistic expectations, accept help, connect with other mothers, and talk to a mental health professional when needed.
+        </p>
+      </details>
+
+      <!-- FAQ Item 4 -->
+      <details class="border-b border-[#3a2a26] pb-4 group">
+        <summary class="cursor-pointer text-lg font-medium text-[#3a2a26] flex justify-between items-center">
+          Can emotional burnout affect my ability to bond with my baby?
+          <span class="text-2xl transform group-open:rotate-45 transition-transform duration-200">＋</span>
+        </summary>
+        <p class="mt-3 text-[#4b2e2e] text-base">
+          Yes, emotional burnout may lead to difficulty connecting or feeling emotionally available. Seeking help early can improve bonding and your mental health.
+        </p>
+      </details>
+
+      <!-- FAQ Item 5 -->
+      <details class="border-b border-[#3a2a26] pb-4 group">
+        <summary class="cursor-pointer text-lg font-medium text-[#3a2a26] flex justify-between items-center">
+          What therapy options are available for postpartum stress and burnout?
+          <span class="text-2xl transform group-open:rotate-45 transition-transform duration-200">＋</span>
+        </summary>
+        <p class="mt-3 text-[#4b2e2e] text-base">
+          Therapy options include cognitive-behavioral therapy (CBT), support groups, couples counseling, and sometimes medication, depending on severity. Always consult a professional.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-top">
+      <span>Connect with us on social media</span>
+      <span class="icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </span>
+    </div>
+    <hr>
+    <div class="footer-bottom">
+      <div class="Horizontal">
+        <span class="Footer-heading">About Us</span>
+        <span>We are a community promoting cybersecurity education in a fun and professional way.</span>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Resources</span>
+        <ul>
+          <li>Blog</li>
+          <li>FAQs</li>
+          <li>Community</li>
+        </ul>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Support</span>
+        <ul>
+          <li>Contact Us</li>
+          <li>Help Center</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Stay Updated</span>
+        <span>Subscribe to our newsletter and never miss an update.</span>
+      </div>
+    </div>
+    <div class="last">
+      <p>&copy; 2025 Written by Riddhi. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

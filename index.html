@@ -5,16 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Postpartum Wellness Center</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght%40700&display=swap" rel="stylesheet">
   <style>
+   
+    html, body {
+      height: 100%; 
+      overflow-x: hidden; 
+      overflow-y: auto; 
+    }
+
     .font-serif {
       font-family: 'Playfair Display', serif;
+    }
+    
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000; 
+      background-color: white; 
+    }
+
+   
+    .dropdown-menu {
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+      pointer-events: none; 
+      visibility: hidden; 
+    }
+
+    .dropdown-menu.active,
+    .group:hover .dropdown-menu { 
+      opacity: 1;
+      transform: scaleY(1);
+      pointer-events: auto; 
+      visibility: visible; 
+    }
+
+    
+    .dropdown-toggle.active {
+      color: #000; 
+
     }
   </style>
 </head>
 <body class="bg-[#E37383]">
 
-  <!-- Top bar -->
   <div class="bg-[#E37383] text-white text-sm px-4 py-2 flex justify-center md:justify-end gap-4">
     <div class="flex items-center gap-1">
        <span class="font-bold"></span>
@@ -23,47 +60,43 @@
     <div></div>
   </div>
 
-  <!-- Navbar -->
-  <nav class="bg-white w-full shadow-md px-6 py-4 flex items-center justify-between flex-wrap">
-    <!-- Logo -->
-   <div class="flex items-center gap-2">
-  <img src="./logo.png" alt="Logo" class="h-10 w-10 object-contain" />
-  <span class="font-serif font-bold text-2xl  tracking-wider">Embrace</span>
-</div>
+  <nav class="bg-white w-full shadow-md px-6 py-4 flex items-center justify-between flex-wrap sticky-nav">
+    <div class="flex items-center gap-2">
+      <img src="./logo.png" alt="Logo" class="h-10 w-10 object-contain" />
+      <span class="font-serif font-bold text-2xl tracking-wider">Embrace</span>
+    </div>
 
-
-    <!-- Nav Links -->
     <div class="hidden md:flex gap-6 text-[#4b2e2e] font-medium">
       <div class="relative group cursor-pointer">
-  <span class="font-semibold text-black">About Us</span>
- 
-  
-  <!-- Dropdown content -->
-  <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
-    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Our Mission</a>
-    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Who We Are</a>
-    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">The Postpartum Difference</a>
-  </div>
-</div>
+        <span class="font-semibold text-black flex items-center dropdown-toggle" data-dropdown-target="aboutUsDropdown">About Us <span class="ml-1">&#9662;</span></span>
+        
+        <div id="aboutUsDropdown" class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md dropdown-menu z-50">
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Our Mission</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Who We Are</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">The Postpartum Difference</a>
+        </div>
+      </div>
 
       <div class="relative group cursor-pointer">
-        <span>What We Treat</span>
+        <span class="flex items-center dropdown-toggle" data-dropdown-target="whatWeTreatDropdown">What We Treat <span class="ml-1">&#9662;</span></span>
 
-        <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
-    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Postpartum Depression</a>
-    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Stress and Emotional Burnout</a>
-    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Birth Trauma and PTSD Treatment</a>
-  </div>
+        <div id="whatWeTreatDropdown" class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md dropdown-menu z-50">
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Postpartum Depression</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Stress and Emotional Burnout</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Birth Trauma and PTSD Treatment</a>
+        </div>
       </div>
+
       <div class="relative group cursor-pointer">
-        <span>Our Rooms</span>
+        <span class="flex items-center dropdown-toggle" data-dropdown-target="ourRoomsDropdown">Our Rooms <span class="ml-1">&#9662;</span></span>
 
-        <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
-    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Loss Room</a>
-    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Hormonal Room</a>
-    <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">New Mom Room</a>
-  </div>
+        <div id="ourRoomsDropdown" class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md dropdown-menu z-50">
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Loss Room</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Hormonal Room</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">New Mom Room</a>
+        </div>
       </div>
+
       <div class="relative group cursor-pointer">
         <span>Connect</span>
       </div>
@@ -71,14 +104,9 @@
         <span>Your Journal</span>
       </div>
     </div>
-
-    
   </nav>
 
-  <!-- Hero Section -->
   <section class="flex flex-col md:flex-row w-full h-auto md:h-screen font-serif">
-    
-    <!-- Left Text -->
     <div class="w-full md:w-1/2 flex flex-col justify-center px-10 py-20 text-white">
       <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
         Welcome to the <br />
@@ -86,58 +114,81 @@
         Wellness Rooms<br />
       </h1>
       <ul class="space-y-2 mb-8 text-lg">
-      <li>✔ Specialized Postpartum Mental Health Care</li>
-      <li>✔ Safe Community Spaces</li>
-      <li>✔ Personalized Treatment</li>
-      
-    </ul>
+        <li>✔ Specialized Postpartum Mental Health Care</li>
+        <li>✔ Safe Community Spaces</li>
+        <li>✔ Personalized Treatment</li>
+      </ul>
 
-    <div class="flex gap-4">
-      <button class="bg-white text-[#b89685] px-6 py-3 rounded-xl font-semibold">
-        CONTACT US
-      </button>
-      <button class="border border-white px-6 py-3 rounded-xl font-semibold">
-        BOOK A SESSION
-      </button>
+      <div class="flex gap-4">
+        <button class="bg-white text-[#b89685] px-6 py-3 rounded-xl font-semibold">
+          CONTACT US
+        </button>
+        <button class="border border-white px-6 py-3 rounded-xl font-semibold">
+          BOOK A SESSION
+        </button>
+      </div>
     </div>
+    <div class="w-1/2 relative overflow-hidden h-full hidden md:block">
+      <img src="./baby.jpeg"
+           alt="Mother and Baby"
+           class="w-full h-full object-cover"
+           style="clip-path: ellipse(180% 100% at 130% 50%);" />
     </div>
-<!-- Right: Image -->
-
-<div class="w-1/2 relative overflow-hidden h-full hidden md:block">
-    <img src="./baby.jpeg"
-         alt="Mother and Baby"
-         class="w-full h-full object-cover"
-         style="clip-path: ellipse(180% 100% at 130% 50%);" />
-  </div>
-
-
   </section>
 
-  <!-- Our Mission Section -->
-<section class="bg-white text-center py-20 px-6 font-serif text-[#4b2e2e]">
-  <!-- Logo -->
-  <div class="flex justify-center mb-6">
-    <img src="./logo.png" alt="Logo" class="h-20 w-auto" />
-  </div>
+  <section class="bg-white text-center py-20 px-6 font-serif text-[#4b2e2e]">
+    <div class="flex justify-center mb-6">
+      <img src="./logo.png" alt="Logo" class="h-20 w-auto" />
+    </div>
 
-  <!-- Heading -->
-  <h2 class="text-4xl font-bold mb-6">Our Mission</h2>
+    <h2 class="text-4xl font-bold mb-6">Our Mission</h2>
 
-  <!-- Description -->
-  <p class="max-w-3xl mx-auto text-lg leading-relaxed text-gray-700">
-   "At Embrace, we are dedicated to building a nurturing and inclusive space for parents facing the emotional journey of pregnancy and postpartum. Our mission is to ensure that no one feels alone—by offering compassionate care, personalized support, and expert treatment that empowers emotional healing and lasting well-being."
+    <p class="max-w-3xl mx-auto text-lg leading-relaxed text-gray-700">
+      "At Embrace, we are dedicated to building a nurturing and inclusive space for parents facing the emotional journey of pregnancy and postpartum. Our mission is to ensure that no one feels alone—by offering compassionate care, personalized support, and expert treatment that empowers emotional healing and lasting well-being."
+    </p>
 
+    <div class="mt-10">
+      <a href="#treatments" class="bg-[#B28E83] hover:bg-[#a87d72] text-white font-semibold px-6 py-3 rounded-xl transition">
+        EXPLORE OUR ROOMS
+      </a>
+    </div>
+  </section>
 
-  </p>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+      
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', (event) => {
+          event.stopPropagation(); // Prevent click from immediately closing if target is body
+          const targetId = toggle.dataset.dropdownTarget;
+          const targetDropdown = document.getElementById(targetId);
 
-  <!-- Button -->
-  <div class="mt-10">
-    <a href="#treatments" class="bg-[#B28E83] hover:bg-[#a87d72] text-white font-semibold px-6 py-3 rounded-xl transition">
-      EXPLORE OUR ROOMS
-    </a>
-  </div>
-</section>
+          // Close all other open dropdowns
+          document.querySelectorAll('.dropdown-menu.active').forEach(openDropdown => {
+            if (openDropdown !== targetDropdown) {
+              openDropdown.classList.remove('active');
+              openDropdown.previousElementSibling.classList.remove('active'); // Remove active from toggle
+            }
+          });
+          
+          // Toggle the clicked dropdown
+          targetDropdown.classList.toggle('active');
+          toggle.classList.toggle('active'); // Add/remove active class to the toggle itself
+        });
+      });
 
+      // Close dropdowns when clicking outside
+      document.addEventListener('click', (event) => {
+        if (!event.target.closest('.group')) { // If click is not inside a dropdown group
+          document.querySelectorAll('.dropdown-menu.active').forEach(openDropdown => {
+            openDropdown.classList.remove('active');
+            openDropdown.previousElementSibling.classList.remove('active'); // Remove active from toggle
+          });
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
