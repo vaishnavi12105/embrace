@@ -53,40 +53,29 @@
     
   </style>
 </head>
-<body class="bg-[#E37383]">
+<body class="bg-[#E37383] text-gray-800">
 
-  <!-- Top bar -->
-  <div class="bg-[#E37383] text-white text-sm px-4 py-2 flex justify-center md:justify-end gap-4">
-    <div class="flex items-center gap-1">
-       <span class="font-bold"></span>
+  <!-- Header -->
+  <div class="bg-[#E37383] text-white text-sm px-4 py-2 flex justify-center md:justify-end gap-4"></div>
+
+  <nav class="bg-white w-full shadow-md px-6 py-4 flex items-center justify-between flex-wrap sticky top-0 z-50">
+    <div class="flex items-center gap-2">
+      <img src="Images/logo.png" alt="Logo" class="h-10 w-10 object-contain" />
+      <span class="font-serif font-bold text-2xl tracking-wider">Embrace</span>
     </div>
-    <div class="hidden md:inline"></div>
-    <div></div>
-  </div>
-
-  <!-- Navbar -->
-  <nav class="bg-white w-full shadow-md px-6 py-4 flex items-center justify-between flex-wrap">
-    <!-- Logo -->
-   <div class="flex items-center gap-2">
-  <img src="Images/logo.png" alt="Logo" class="h-10 w-10 object-contain" />
-  <span class="font-serif font-bold text-2xl  tracking-wider">Embrace</span>
-</div>
-
 
     <div class="hidden md:flex gap-6 text-[#4b2e2e] font-medium">
       <div class="relative group cursor-pointer">
-        <span class="font-semibold text-black flex items-center dropdown-toggle" data-dropdown-target="aboutUsDropdown">About Us <span class="ml-1">&#9662;</span></span>
-        
-        <div id="aboutUsDropdown" class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md dropdown-menu z-50">
+        <span class="dropdown-toggle font-semibold text-black flex items-center">About Us <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
           <a href="#trying" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Our Mission</a>
           <a href="#trying2" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Why Choose Us?</a>
         </div>
       </div>
 
       <div class="relative group cursor-pointer">
-        <span class="font-semibold text-black flex items-center dropdown-toggle" data-dropdown-target="whatWeTreatDropdown">What We Treat <span class="ml-1">&#9662;</span></span>
-
-        <div id="whatWeTreatDropdown" class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md dropdown-menu z-50">
+        <span class="dropdown-toggle font-semibold text-black flex items-center">What We Treat <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
           <a href="./post1.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Postpartum Depression</a>
           <a href="./post2.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Stress and Emotional Burnout</a>
           <a href="./post3.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Birth Trauma and PTSD Treatment</a>
@@ -94,9 +83,8 @@
       </div>
 
       <div class="relative group cursor-pointer">
-        <span class="font-semibold text-black flex items-center dropdown-toggle" data-dropdown-target="ourRoomsDropdown">Our Rooms <span class="ml-1">&#9662;</span></span>
-
-        <div id="ourRoomsDropdown" class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md dropdown-menu z-50">
+        <span class="dropdown-toggle font-semibold text-black flex items-center">Our Rooms <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
           <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Loss Room</a>
           <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Hormonal Room</a>
           <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">New Mom Room</a>
@@ -104,49 +92,17 @@
       </div>
 
       <div class="relative group cursor-pointer">
-        <span class="font-semibold text-black" >Connect</span>
+        <span class="dropdown-toggle font-semibold text-black flex items-center">Connect <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
+          <a href="./therapist.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">One-on-One Healing</a>
+          <a href="./support.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Community Support</a>
+        </div>
       </div>
-      <div class="relative group cursor-pointer">
-        <span class="font-semibold text-black">Your Journal</span>
-      </div>
+
+      <span class="font-semibold text-black cursor-pointer">Your Journal</span>
     </div>
   </nav>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-      
-      dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', (event) => {
-          event.stopPropagation(); // Prevent click from immediately closing if target is body
-          const targetId = toggle.dataset.dropdownTarget;
-          const targetDropdown = document.getElementById(targetId);
-
-          // Close all other open dropdowns
-          document.querySelectorAll('.dropdown-menu.active').forEach(openDropdown => {
-            if (openDropdown !== targetDropdown) {
-              openDropdown.classList.remove('active');
-              openDropdown.previousElementSibling.classList.remove('active'); // Remove active from toggle
-            }
-          });
-          
-          // Toggle the clicked dropdown
-          targetDropdown.classList.toggle('active');
-          toggle.classList.toggle('active'); // Add/remove active class to the toggle itself
-        });
-      });
-
-      // Close dropdowns when clicking outside
-      document.addEventListener('click', (event) => {
-        if (!event.target.closest('.group')) { // If click is not inside a dropdown group
-          document.querySelectorAll('.dropdown-menu.active').forEach(openDropdown => {
-            openDropdown.classList.remove('active');
-            openDropdown.previousElementSibling.classList.remove('active'); // Remove active from toggle
-          });
-        }
-      });
-    });
-  </script>
 
 
 
