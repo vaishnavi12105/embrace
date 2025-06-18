@@ -1,41 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Letters I Never Sent | Embrace</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./FAQ/faq.css">
   <style>
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .dropdown-menu {
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    .dropdown-menu.active,
+    .group:hover .dropdown-menu {
+      opacity: 1;
+      transform: scaleY(1);
+      pointer-events: auto;
+      visibility: visible;
+    }
+
+    .dropdown-toggle.active {
+      color: #000;
+    }
+
     body {
       background: #ffffff;
       font-family: 'Georgia', serif;
-      margin: 40px;
+      margin: 0;
       color: #333;
-      position: relative;
       overflow-x: hidden;
+    }
+
+    .main-container {
       display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px;
     }
 
     .affirmation-column {
       width: 150px;
       padding: 10px;
       font-size: 14px;
-      background: #f1e7d5; /*background color*/
+      background: #f1e7d5;
       color: #93386a;
       font-style: italic;
       border-radius: 10px;
       height: 90vh;
       overflow-y: auto;
       position: sticky;
-      top: 0;
+      top: 20px;
+      flex-shrink: 0;
     }
 
-    .sidepic{
-      width:120px;
-      padding:10px;
-      
-      height:256px;
-      background:url("https://th.bing.com/th/id/OIP.cVRdQkpOWqRhi2E-gbEVBgDMEy?rs=1&pid=ImgDetMain");
-      background-size:cover;
+    .sidepic {
+      width: 120px;
+      height: 256px;
+      padding: 10px;
+      background: url("https://th.bing.com/th/id/OIP.cVRdQkpOWqRhi2E-gbEVBgDMEy?rs=1&pid=ImgDetMain");
+      background-size: cover;
       border-radius: 15px;
+      margin-top: 20px;
     }
 
     .affirmation-column ul {
@@ -49,10 +84,9 @@
 
     .letter-journal {
       max-width: 900px;
-      margin: auto;
       animation: fadeIn 1.5s ease;
       flex: 1;
-      padding: 0 20px;
+      padding: 0 10px;
     }
 
     @keyframes fadeIn {
@@ -113,7 +147,6 @@
       margin-bottom: 15px;
       text-align: center;
       color: #5c2b3f;
-      width: 100%;
     }
 
     .pink { background-color: #e8b9b9; }
@@ -139,31 +172,12 @@
       min-height: 120px;
     }
 
-    .image-box-1 {
+    .image-box-1, .image-box-2, .image-box-3, .image-box-4, .image-box-5 {
       width: 140px;
       height: 120px;
       border: 2px solid #aaa;
-      background:url("https://image3.photobiz.com/8929/9_20210421203142_10403617_large.jpg");
-        border-top-left-radius: 50px;
-      background-size:cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      color: #777;
-      text-align: center;
-      padding: 5px;
-      box-sizing: border-box;
-      flex-shrink: 0;
-      margin-top: -10px;
-    }
-    .image-box-2{
-      width: 140px;
-      height: 120px;
-      border: 2px solid #aaa;
-      background:url("https://static.showit.co/1600/Ctmj73vcR6ebMxvWyasXrA/shared/daniellehutchinsonphotography_3_of_67.jpg");
-       background-size:cover;
       border-top-left-radius: 50px;
+      background-size: cover;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -174,158 +188,203 @@
       box-sizing: border-box;
       flex-shrink: 0;
       margin-top: -10px;
-
     }
-    .image-box-3{
-      width: 140px;
-      height: 120px;
-      border: 2px solid #aaa;
-      background:url("https://spin.atomicobject.com/wp-content/uploads/20160318142624/IMG_5674-590x443.jpg");
-      background-size:cover;
-      border-top-left-radius: 50px;
-      
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      color: #777;
-      text-align: center;
-      padding: 5px;
-      box-sizing: border-box;
-      flex-shrink: 0;
-      margin-top: -10px;
 
-    }
-    .image-box-4{
-      width: 140px;
-      height: 120px;
-      border: 2px solid #aaa;
-      background:url("https://th.bing.com/th/id/OIP.91vF0JRmzemQwdiEmTpT3gAAAA?w=400&h=514&rs=1&pid=ImgDetMain");
-      background-size:cover;
-      border-top-left-radius: 50px;
-      
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      color: #777;
-      text-align: center;
-      padding: 5px;
-      box-sizing: border-box;
-      flex-shrink: 0;
-      margin-top: -10px;
+    .image-box-1 { background-image: url("https://image3.photobiz.com/8929/9_20210421203142_10403617_large.jpg"); }
+    .image-box-2 { background-image: url("https://static.showit.co/1600/Ctmj73vcR6ebMxvWyasXrA/shared/daniellehutchinsonphotography_3_of_67.jpg"); }
+    .image-box-3 { background-image: url("https://spin.atomicobject.com/wp-content/uploads/20160318142624/IMG_5674-590x443.jpg"); }
+    .image-box-4 { background-image: url("https://th.bing.com/th/id/OIP.91vF0JRmzemQwdiEmTpT3gAAAA?w=400&h=514&rs=1&pid=ImgDetMain"); }
+    .image-box-5 { background-image: url("https://img.freepik.com/premium-photo/woman-holds-baby-her-arms_444642-2878.jpg"); }
 
+    @media (max-width: 768px) {
+      .affirmation-column {
+        display: none;
+      }
+      .main-container {
+        margin: 20px;
+      }
     }
-    
-    .image-box-5{
-      width: 140px;
-      height: 120px;
-      border: 2px solid #aaa;
-      background:url("https://img.freepik.com/premium-photo/woman-holds-baby-her-arms_444642-2878.jpg");
-      background-size:cover;
-      border-top-left-radius: 50px;
-      
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      color: #777;
-      text-align: center;
-      padding: 5px;
-      box-sizing: border-box;
-      flex-shrink: 0;
-      margin-top: -10px;
-
-    }
-    
-  </style>
   </style>
 </head>
 <body>
 
+  <div class="bg-[#E37383] text-white text-sm px-4 py-2 flex justify-center md:justify-end gap-4"></div>
 
+  <nav class="bg-white w-full shadow-md px-6 py-4 flex items-center justify-between flex-wrap sticky top-0 z-50">
+    <div class="flex items-center gap-2">
+      <img src="Images/logo.png" alt="Logo" class="h-10 w-10 object-contain" />
+      <span class="font-serif font-bold text-2xl tracking-wider">Embrace</span>
+    </div>
 
-    
+    <div class="hidden md:flex gap-6 text-[#4b2e2e] font-medium">
+      <div class="relative group cursor-pointer">
+        <span class="dropdown-toggle font-semibold text-black flex items-center">About Us <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
+          <a href="#trying" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Our Mission</a>
+          <a href="#trying2" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Why Choose Us?</a>
+        </div>
+      </div>
 
-  <div class="affirmation-column">
-    <ul>
-      <li>You are enough.</li>
-      <li>Your story matters.</li>
-      <li>You are not alone.</li>
-      <li>Healing takes time.</li>
-      <li>Let your heart speak.</li>
-      <li>You’re doing your best.</li>
-      <li>Your strength is beautiful.</li>
-      <li>Hope lives in you.</li>
-      <li>This moment matters.</li>
-      <li>You’re worthy of peace.</li>
-      <li>Your voice is healing.</li>
-    </ul>
-    <div class="sidepic"></div>
+      <div class="relative group cursor-pointer">
+        <span class="dropdown-toggle font-semibold text-black flex items-center">What We Treat <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
+          <a href="./post1.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Postpartum Depression</a>
+          <a href="./post2.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Stress and Emotional Burnout</a>
+          <a href="./post3.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Birth Trauma and PTSD Treatment</a>
+        </div>
+      </div>
+
+      <div class="relative group cursor-pointer">
+        <span class="dropdown-toggle font-semibold text-black flex items-center">Our Rooms <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Loss Room</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Hormonal Room</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">New Mom Room</a>
+        </div>
+      </div>
+
+      <div class="relative group cursor-pointer">
+        <span class="dropdown-toggle font-semibold text-black flex items-center">Connect <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
+          <a href="./therapist.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">One-on-One Healing</a>
+          <a href="./support.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Community Support</a>
+        </div>
+      </div>
+
+      <span class="font-semibold text-black cursor-pointer">Your Journal</span>
+    </div>
+  </nav>
+
+  <!-- Main Content Layout -->
+  <div class="main-container">
+    <!-- Left Sidebar -->
+    <div class="affirmation-column">
+      <ul>
+        <li>You are enough.</li>
+        <li>Your story matters.</li>
+        <li>You are not alone.</li>
+        <li>Healing takes time.</li>
+        <li>Let your heart speak.</li>
+        <li>You’re doing your best.</li>
+        <li>Your strength is beautiful.</li>
+        <li>Hope lives in you.</li>
+        <li>This moment matters.</li>
+        <li>You’re worthy of peace.</li>
+        <li>Your voice is healing.</li>
+      </ul>
+      <div class="sidepic"></div>
+    </div>
+
+    <!-- Journal Content -->
+    <div class="letter-journal">
+      <h1>Letters I Never Sent</h1>
+      <h2>Unspoken emotions, finally expressed</h2>
+      <div class="date">DATE: <input type="text" placeholder="MM/DD/YYYY"></div>
+
+      <div class="section pink">
+        <h3>To My Baby</h3>
+        <div class="text-box-container">
+          <textarea placeholder="Write everything your heart wishes you could say..."></textarea>
+          <div class="image-box-1"></div>
+        </div>
+      </div>
+
+      <div class="section lavender">
+        <h3>To My Partner</h3>
+        <div class="text-box-container">
+          <textarea placeholder="Express the emotions you haven’t yet shared with your partner..."></textarea>
+          <div class="image-box-2"></div>
+        </div>
+      </div>
+
+      <div class="section blue">
+        <h3>To My Hopes and Fears</h3>
+        <div class="text-box-container">
+          <textarea placeholder="Reflect on the dreams that kept you going and the worries that held you back..."></textarea>
+          <div class="image-box-3"></div>
+        </div>
+      </div>
+
+      <div class="section mint">
+        <h3>To the Support I Craved</h3>
+        <div class="text-box-container">
+          <textarea placeholder="Share the comfort, presence, or words you wished for most..."></textarea>
+          <div class="image-box-4"></div>
+        </div>
+      </div>
+
+      <div class="section peach">
+        <h3>To the Woman I Am Today</h3>
+        <div class="text-box-container">
+          <textarea placeholder="Speak with kindness and strength to yourself in this very moment..."></textarea>
+          <div class="image-box-5"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="affirmation-column">
+      <ul>
+        <li>Breathe. You are healing.</li>
+        <li>Your words are power.</li>
+        <li>Every emotion is sacred.</li>
+        <li>You’re creating light.</li>
+        <li>Peace begins with expression.</li>
+        <li>Your voice is brave.</li>
+        <li>Keep moving forward.</li>
+        <li>You radiate strength.</li>
+        <li>One breath at a time.</li>
+        <li>It's okay to rest.</li>
+      </ul>
+      <div class="sidepic"></div>
+    </div>
   </div>
-  
 
-  <div class="letter-journal">
-    <h1>Letters I Never Sent</h1>
-    <h2>Unspoken emotions, finally expressed</h2>
-    <div class="date">DATE: <input type="text" placeholder="MM/DD/YYYY"></div>
+  <footer>
+        <div class="footer-top">
+        <span>Connect with us on social media</span>
+        <span class="icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </span>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+        <div class="Horizontal">
+            <span class="Footer-heading">About Us</span>
+            <span>We are a community promoting cybersecurity education in a fun and professional way.</span>
+        </div>
+        <div class="Horizontal">
+            <span class="Footer-heading">Resources</span>
+            <ul>
+            <li>Blog</li>
+            <li>FAQs</li>
+            <li>Community</li>
+            </ul>
+        </div>
+        <div class="Horizontal">
+            <span class="Footer-heading">Support</span>
+            <ul>
+            <li>Contact Us</li>
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            </ul>
+        </div>
+        <div class="Horizontal">
+            <span class="Footer-heading">Stay Updated</span>
+            <span>Subscribe to our newsletter and never miss an update.</span>
+        </div>
+        </div>
+        <div class="last">
+        <p>&copy; 2025 Written by Riddhi. All rights reserved.</p>
+        </div>
+  </footer>
 
-    <div class="section pink">
-      <h3>To My Baby</h3>
-      <div class="text-box-container">
-        <textarea placeholder="Write everything your heart wishes you could say..."></textarea>
-        <div class="image-box-1"></div>
-      </div>
-    </div>
-
-    <div class="section lavender">
-      <h3>To My Partner</h3>
-      <div class="text-box-container">
-        <textarea placeholder="Express the emotions you haven’t yet shared with your partner..."></textarea>
-        <div class="image-box-2"></div>
-      </div>
-    </div>
-
-    <div class="section blue">
-      <h3>To My Hopes and Fears</h3>
-      <div class="text-box-container">
-        <textarea placeholder="Reflect on the dreams that kept you going and the worries that held you back..."></textarea>
-        <div class="image-box-3"></div>
-      </div>
-    </div>
-
-    <div class="section mint">
-      <h3>To the Support I Craved</h3>
-      <div class="text-box-container">
-        <textarea placeholder="Share the comfort, presence, or words you wished for most..."></textarea>
-        <div class="image-box-4"></div>
-      </div>
-    </div>
-
-    <div class="section peach">
-      <h3>To the Woman I Am Today</h3>
-      <div class="text-box-container">
-        <textarea placeholder="Speak with kindness and strength to yourself in this very moment..."></textarea>
-        <div class="image-box-5"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="affirmation-column">
-    <ul>
-      <li>Breathe. You are healing.</li>
-      <li>Your words are power.</li>
-      <li>Every emotion is sacred.</li>
-      <li>You’re creating light.</li>
-      <li>Peace begins with expression.</li>
-      <li>Your voice is brave.</li>
-      <li>Keep moving forward.</li>
-      <li>You radiate strength.</li>
-      <li>One breath at a time.</li>
-      <li>It's okay to rest.</li>
-      
-    </ul>
-    <div class="sidepic"></div>
-  </div>
 </body>
 </html>
+
+
+
+

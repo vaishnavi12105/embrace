@@ -8,73 +8,84 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="./FAQ/faq.css">
+   <style>
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .dropdown-menu {
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    .dropdown-menu.active,
+    .group:hover .dropdown-menu {
+      opacity: 1;
+      transform: scaleY(1);
+      pointer-events: auto;
+      visibility: visible;
+    }
+
+    .dropdown-toggle.active {
+      color: #000;
+    }
+  </style>
+  
   
 </head>
 <body>
 
-  <!-- Top bar -->
-  <div class="bg-[#E37383] text-white text-sm px-4 py-2 flex justify-center md:justify-end gap-4">
-    <div class="flex items-center gap-1">
-       <span class="font-bold"></span>
-    </div>
-    <div class="hidden md:inline"></div>
-    <div></div>
-  </div>
+  <div class="bg-[#E37383] text-white text-sm px-4 py-2 flex justify-center md:justify-end gap-4"></div>
 
-  <!-- Navbar -->
-   <!-- Top pink strip -->
-  <div class="w-full h-[12px] bg-[#e37378] fixed top-0 left-0 z-50"></div>
-
-  <nav class="bg-white w-full shadow-md px-6 py-3 flex items-center justify-between flex-wrap fixed top-[6px] left-0 z-40">
-
-    <!-- Logo -->
+  <nav class="bg-white w-full shadow-md px-6 py-4 flex items-center justify-between flex-wrap sticky top-0 z-50">
     <div class="flex items-center gap-2">
       <img src="Images/logo.png" alt="Logo" class="h-10 w-10 object-contain" />
       <span class="font-serif font-bold text-2xl tracking-wider">Embrace</span>
     </div>
 
-    <!-- Mobile Menu Toggle -->
-    <button class="md:hidden text-[#4b2e2e]" id="menu-toggle">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" 
-          viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-              d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-
-    <!-- Nav Links -->
-    <div id="menu" class="hidden w-full md:flex md:w-auto flex-col md:flex-row gap-6 text-[#4b2e2e] font-medium mt-4 md:mt-0">
+    <div class="hidden md:flex gap-6 text-[#4b2e2e] font-medium">
       <div class="relative group cursor-pointer">
-        <span class="font-semibold text-black">About Us</span>
-        <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
-          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Our Mission</a>
-          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Who We Are</a>
-          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">The Postpartum Difference</a>
+        <span class="dropdown-toggle font-semibold text-black flex items-center">About Us <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
+          <a href="#trying" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Our Mission</a>
+          <a href="#trying2" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Why Choose Us?</a>
         </div>
       </div>
 
       <div class="relative group cursor-pointer">
-        <span>What We Treat</span>
-        <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
-          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Postpartum Depression</a>
-          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Stress and Emotional Burnout</a>
-          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Birth Trauma and PTSD Treatment</a>
+        <span class="dropdown-toggle font-semibold text-black flex items-center">What We Treat <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
+          <a href="./post1.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Postpartum Depression</a>
+          <a href="./post2.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Stress and Emotional Burnout</a>
+          <a href="./post3.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Birth Trauma and PTSD Treatment</a>
         </div>
       </div>
 
       <div class="relative group cursor-pointer">
-        <span>Our Rooms</span>
-        <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
+        <span class="dropdown-toggle font-semibold text-black flex items-center">Our Rooms <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
           <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Loss Room</a>
           <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Hormonal Room</a>
           <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">New Mom Room</a>
         </div>
       </div>
 
-      <a href="#" class="cursor-pointer">Connect</a>
-      <a href="#" class="cursor-pointer">Your Journal</a>
+      <div class="relative group cursor-pointer">
+        <span class="dropdown-toggle font-semibold text-black flex items-center">Connect <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
+          <a href="./therapist.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">One-on-One Healing</a>
+          <a href="./support.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Community Support</a>
+        </div>
+      </div>
+
+      <span class="font-semibold text-black cursor-pointer">Your Journal</span>
     </div>
   </nav>
+
 
   <div class="pt-20"> <!-- Add padding to push content below fixed nav -->
     <div class="quote-box">
