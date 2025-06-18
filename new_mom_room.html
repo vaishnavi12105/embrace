@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resource Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./FAQ/faq.css">
+  
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="bg-[#E37383] text-white text-sm px-4 py-2 flex justify-center md:justify-end gap-4">
+    <div class="flex items-center gap-1">
+       <span class="font-bold"></span>
+    </div>
+    <div class="hidden md:inline"></div>
+    <div></div>
+  </div>
+
+  <!-- Navbar -->
+   <!-- Top pink strip -->
+  <div class="w-full h-[12px] bg-[#e37378] fixed top-0 left-0 z-50"></div>
+
+  <nav class="bg-white w-full shadow-md px-6 py-3 flex items-center justify-between flex-wrap fixed top-[6px] left-0 z-40">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <img src="Images/logo.png" alt="Logo" class="h-10 w-10 object-contain" />
+      <span class="font-serif font-bold text-2xl tracking-wider">Embrace</span>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="md:hidden text-[#4b2e2e]" id="menu-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" 
+          viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Nav Links -->
+    <div id="menu" class="hidden w-full md:flex md:w-auto flex-col md:flex-row gap-6 text-[#4b2e2e] font-medium mt-4 md:mt-0">
+      <div class="relative group cursor-pointer">
+        <span class="font-semibold text-black">About Us</span>
+        <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Our Mission</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Who We Are</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">The Postpartum Difference</a>
+        </div>
+      </div>
+
+      <div class="relative group cursor-pointer">
+        <span>What We Treat</span>
+        <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Postpartum Depression</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Stress and Emotional Burnout</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Birth Trauma and PTSD Treatment</a>
+        </div>
+      </div>
+
+      <div class="relative group cursor-pointer">
+        <span>Our Rooms</span>
+        <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Loss Room</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Hormonal Room</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">New Mom Room</a>
+        </div>
+      </div>
+
+      <a href="#" class="cursor-pointer">Connect</a>
+      <a href="#" class="cursor-pointer">Your Journal</a>
+    </div>
+  </nav>
+
+  <div class="pt-20"> <!-- Add padding to push content below fixed nav -->
+    <div class="quote-box">
+        <p class="loss-quote">You are welcome here. Everything you're feeling is valid. This is your safe space to breathe, to be honest, and to begin healing.</p>
+        <p class="intro-to-page">Becoming a mother is often painted as a joyful beginning — but the truth can be far more complicated. Postpartum depression, body image struggles, and emotional disconnect can leave you feeling lost, guilty, or overwhelmed. Maybe you feel numb. Maybe you feel resentment and don’t understand why. That doesn’t make you a bad mother — it makes you human. This space exists to hold those feelings without judgment. Whether you’re searching for peace, understanding, or simply the reminder that you're not alone, you belong here. Through stories, support, and care, we hope this room becomes a place to rest, reconnect, and remember: you matter too.</p>
+    </div>
+    </div>
+
+    <section class="grief-section">
+        <div class="grief-container">
+            <div class="grief-box">
+            <h3 class="grief-heading">Understanding Postpartum Emotions</h3>
+            <p class="grief-text">
+                Postpartum depression isn’t just sadness — it’s the heaviness that lingers when the world tells you to smile. It’s crying for no reason, feeling distant from your own baby, or feeling like you've lost pieces of who you were. And sometimes, it’s quiet resentment — not toward your child, but toward the exhaustion, the loneliness, the lack of space to just be. It’s okay to feel that. Your body has changed. Your life has shifted. Your needs still matter. This isn’t about failure — it’s about fatigue, hormones, and the weight of invisible expectations. Naming the feeling is powerful. Seeking support is brave. You are allowed to not be okay, and you are deserving of care, rest, and recovery.
+            </p>
+            </div>
+            <div class="grief-box">
+            <h3 class="grief-heading">Reclaiming Your Sense of Self</h3>
+            <p class="grief-text">
+                Healing in motherhood doesn’t mean bouncing back — it means slowly becoming someone new, without losing the core of who you are. It may look like rediscovering your body with gentleness, having hard conversations with your partner, or carving out ten quiet minutes just for you. These small moments are powerful. You are not selfish for needing space, for grieving your old life, or for asking for more. You are allowed to want joy, comfort, intimacy, and peace. It will take time. You won’t always feel this way. There is no rush. There is no right way to be a mother. There is only your way. And you are doing better than you think.
+            </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="fancy-divider">
+        <span class="line"></span>
+        <span class="symbol">&#8764;</span> <!-- Tilde Operator -->
+        <span class="symbol">&#9670;</span> <!-- Black Diamond -->
+        <span class="symbol">&#8764;</span>
+        <span class="line"></span>
+    </div>
+
+    <div class="resource-intro">
+        <h4 class="resource-heading">Explore Resources</h4>
+        <p>
+            Motherhood is not just about birth — it’s about rebirth too. Explore a curated selection of articles, podcasts, books, and videos that speak to the emotional rollercoaster of postpartum life. From postpartum depression and changing body image to partner disconnect, these resources are here to validate, educate, and support your healing.
+        </p>
+    </div>
+
+    <div class="pt-1">
+        <div class="resource-tabs" id="navbar">
+            <div class="slider" id="slider"></div>
+            <button data-index="0">Articles</button>
+            <button data-index="1">Podcasts</button>
+            <button data-index="2">Books</button>
+            <button data-index="3">Videos</button>
+        </div>
+    </div>
+
+    <!-- Topic 0: Articles -->
+    <div class="grid active" id="topic-0">
+    <div class="card">
+        <img src="Images/woman_sad.jpg" alt="">
+        <div class="card-content">
+        <div class="card-category">Articles</div>
+        <div class="card-title">When the Joy Doesn't Come</div>
+        <div class="card-desc">A raw look into postpartum depression and the guilt that often silences new mothers from seeking help.</div>
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/woman_sad2.jpg" alt="">
+        <div class="card-content">
+        <div class="card-category">Articles</div>
+        <div class="card-title">Loving a Body You Don’t Recognize</div>
+        <div class="card-desc">Explores how childbirth changes body image and ways to begin reconnecting with yourself.</div>
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/woman_stressed.jpg" alt="">
+        <div class="card-content">
+        <div class="card-category">Articles</div>
+        <div class="card-title">The Invisible Load of Motherhood</div>
+        <div class="card-desc">An honest discussion on emotional labor, partner disconnect, and feeling unseen in the early months of parenting.</div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Topic 1: Podcasts -->
+    <div class="grid hidden" id="topic-1">
+        <div class="card">
+            <img src="Images/podcast1.jpg" alt="">
+            <div class="card-content">
+            <div class="card-category">Podcasts</div>
+            <div class="card-title">Mom & Mind</div>
+            <div class="card-desc">Hosted by a perinatal psychologist, this podcast dives into postpartum mental health with empathy and insight.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/podcast2.jpg" alt="">
+            <div class="card-content">
+            <div class="card-category">Podcasts</div>
+            <div class="card-title">Fourth Trimester</div>
+            <div class="card-desc">An exploration of what no one tells you about the first months after birth — mental health, identity shifts, and real stories.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/podcast3.jpg" alt="">
+            <div class="card-content">
+            <div class="card-category">Podcasts</div>
+            <div class="card-title">The Longest Shortest Time</div>
+            <div class="card-desc">A beautifully produced show featuring raw, relatable motherhood experiences — the messy, the magical, and everything in between.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Topic 2: Books -->
+    <div class="grid hidden" id="topic-2">
+        <div class="card">
+            <img src="Images/books1.jpg" alt="">
+            <div class="card-content">
+            <div class="card-category">Books</div>
+            <div class="card-title">Good Moms Have Scary Thoughts</div>
+            <div class="card-desc">A supportive illustrated book filled with honest affirmations and real advice for moms dealing with postpartum anxiety and depression.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/woman_crying2.jpg" alt="">
+            <div class="card-content">
+            <div class="card-category">Books</div>
+            <div class="card-title">The Body Keeps the Score</div>
+            <div class="card-desc">Though not specific to motherhood, this bestseller explores how trauma is stored in the body — powerful insight for moms feeling disconnected or dysregulated.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/books3.jpg" alt="">
+            <div class="card-content">
+            <div class="card-category">Books</div>
+            <div class="card-title">Motherwhelmed</div>
+            <div class="card-desc">A beautifully written blend of memoir and manifesto that talks honestly about burnout, identity loss, and emotional exhaustion in early motherhood.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Topic 3: Videos -->
+    <div class="grid hidden" id="topic-3">
+        <div class="card">
+            <img src="Images/videos1.jpg" alt="">
+            <div class="card-content">
+            <div class="card-category">Videos</div>
+            <div class="card-title">Postpartum Depression Explained</div>
+            <div class="card-desc">A simple, compassionate breakdown of postpartum depression — what it feels like, how to recognize it, and how to get help.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/videos2.jpg" alt="">
+            <div class="card-content">
+            <div class="card-category">Videos</div>
+            <div class="card-title">Dear New Mom, You’re Doing Great</div>
+            <div class="card-desc">A tear-jerking video letter from moms to moms — reminding you that exhaustion, doubt, and overwhelm don’t make you a bad parent.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/woman_struggling.jpg" alt="">
+            <div class="card-content">
+            <div class="card-category">Videos</div>
+            <div class="card-title">Why No One Talks About Postpartum Rage</div>
+            <div class="card-desc">A powerful video addressing lesser-known postpartum emotions like anger and irritability, and why they deserve attention too.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other's Experiences -->
+    <section class="story-carousel-section">
+        <h2 class="story-carousel-heading">Real Stories, Real Hope</h2>
+        <div class="story-box">
+            <div id="story-text" class="story-text"></div>
+            <div id="story-author" class="story-author"></div>
+        </div>
+        <div class="story-buttons">
+            <button onclick="prevStory()" class="story-nav-btn">← Previous</button>
+            <button onclick="nextStory()" class="story-nav-btn">Next →</button>
+        </div>
+    </section>
+
+    <!-- Express Your Truth -->
+    <section class="healing-new">
+        <div class="healing-new-content">
+            <div class="healing-new-image">
+            <img src="Images/letter.jpg" alt="Letter Illustration">
+            </div>
+
+            <div class="healing-new-text">
+            <h2 class="healing-new-heading">Letters You Never Got to Say</h2>
+            <p class="healing-new-subtext">
+                Sometimes, motherhood brings up thoughts you feel you shouldn't say out loud — frustration, loneliness, even resentment.
+                This space is here for all of that.
+                <br>
+                Write a letter to yourself. To your partner. To the you-before-baby. To anyone who needs to hear your truth.
+                <br>
+                Let the words out. Let the healing begin.
+            </p>
+
+            <div class="healing-new-boxes">
+                <div class="healing-box">Write what you never felt safe saying out loud. This space holds no judgment.</div>
+                <div class="healing-box">You can be grateful and exhausted at the same time. Let both feelings exist here.</div>
+                <div class="healing-box">Say what motherhood has taken from you — and what it has taught you.</div>
+                <div class="healing-box">This is about your truth, not perfection. Speak from where you are, not where you "should" be.</div>
+            </div>
+
+            <a href="Images/letter.html" class="healing-new-link">
+                <button class="healing-new-button">Write Your Letter</button>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Therapy and Support Groups -->
+    <section class="support-therapy-section">
+        <div class="overlay">
+            <div class="support-container">
+            <div class="tabs">
+                <button class="tab-button active" onclick="showTab('community')">Mom Circles</button>
+                <button class="tab-button" onclick="showTab('therapy')">Private Therapy</button>
+            </div>
+
+            <div id="community" class="tab-content active">
+                <h3>Find Your People</h3>
+                <p>
+                You’re not the only one feeling lost, stretched thin, or unsure. Join honest circles of new moms who understand the unspoken side of motherhood — from body image struggles to feeling invisible in your own home. Laughter, tears, realness — it all belongs here.
+                </p>
+                <a href="support-group.html" class="tab-link">Join the Mom Circle</a>
+            </div>
+
+            <div id="therapy" class="tab-content">
+                <h3>One-on-One Support</h3>
+                <p>
+                If your thoughts feel heavy or you're simply craving a space that's just for you, therapy can help. Whether you're navigating postpartum depression, anxiety, or emotional overload, you deserve to talk it through with someone who truly listens.
+                </p>
+                <a href="therapy.html" class="tab-link">Explore Therapy Options</a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll('.resource-tabs button');
+            const grids = document.querySelectorAll('.grid');
+            const slider = document.getElementById('slider');
+
+            const buttonCount = buttons.length;
+            slider.style.width = `${100 / buttonCount}%`;
+            slider.style.left = '0%'; // First button
+
+            buttons.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                slider.style.left = `${(index * 100) / buttonCount}%`;
+
+                grids.forEach((grid, i) => {
+                if (i === index) {
+                    grid.classList.remove('hidden');
+                    grid.classList.add('active');
+                } else {
+                    grid.classList.add('hidden');
+                    grid.classList.remove('active');
+                }
+                });
+            });
+            });
+
+            // Show first story on load
+            displayStory(currentIndex);
+        });
+
+        const stories = [
+            {
+            text: "After my son was born, everyone assumed I was glowing. But inside, I felt hollow. I cried in the shower, snapped at my partner, and wondered why I wasn’t feeling the joy everyone promised. I loved my baby, but I missed me. The real me felt like she’d been swallowed whole by diapers, feeds, and expectations. I didn’t need to be fixed — I needed to be heard. Therapy helped. So did admitting out loud: I’m not okay… yet.",
+            author: "~ Ananya"
+            },
+            {
+            text: "They handed me my baby and called me a warrior. But when I looked in the mirror, I didn’t recognize the woman staring back. Stretch marks, sagging skin, and a body that felt foreign — I hated how ungrateful that made me sound. I had a healthy baby, wasn’t that enough? But it’s okay to grieve your old self while learning to love your new one. I’m still learning. Some days I cry. Other days I dance in the kitchen with my baby on my hip.",
+            author: "~ Meera"
+            },
+            {
+            text: "He stopped looking at me the way he used to. I didn’t blame him — I had changed. My moods were erratic, my body scarred, and I barely had energy left for a conversation, let alone romance. But it hurt. I didn’t want flowers. I just wanted him to see me again. To ask if I was okay, to hold the baby while I slept. The neglect wasn’t loud. It was quiet — in the way no one asked how I was doing. Not even him.",
+            author: "~ Kavya"
+            },
+            {
+            text: "Everyone else made motherhood look easy on Instagram. Meanwhile, I was googling 'is it normal to feel disconnected from your baby?' I felt ashamed. I didn’t want to hurt her, but I didn’t feel bonded either. What kind of mother feels… nothing? I whispered this to my pediatrician, shaking with guilt. She nodded, calmly, and said: ‘You're not alone. It's called postpartum depression. And it’s treatable.’ That moment saved me.",
+            author: "~ Priya"
+            }
+        ];
+
+        let currentIndex = 0;
+
+        function displayStory(index) {
+            const storyText = document.getElementById("story-text");
+            const storyAuthor = document.getElementById("story-author");
+
+            // Optional: Fade out-in effect
+            storyText.style.opacity = 0;
+            storyAuthor.style.opacity = 0;
+
+            setTimeout(() => {
+            storyText.innerText = `"${stories[index].text}"`;
+            storyAuthor.innerText = stories[index].author;
+
+            storyText.style.opacity = 1;
+            storyAuthor.style.opacity = 1;
+            }, 200);
+        }
+
+        function nextStory() {
+            currentIndex = (currentIndex + 1) % stories.length;
+            displayStory(currentIndex);
+        }
+
+        function prevStory() {
+            currentIndex = (currentIndex - 1 + stories.length) % stories.length;
+            displayStory(currentIndex);
+        }
+
+        function showTab(tabId, event) {
+            const tabs = document.querySelectorAll('.tab-content');
+            const buttons = document.querySelectorAll('.tab-button');
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+        </script>
+
+    <footer>
+        <div class="footer-top">
+        <span>Connect with us on social media</span>
+        <span class="icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </span>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+        <div class="Horizontal">
+            <span class="Footer-heading">About Us</span>
+            <span>We are a community promoting cybersecurity education in a fun and professional way.</span>
+        </div>
+        <div class="Horizontal">
+            <span class="Footer-heading">Resources</span>
+            <ul>
+            <li>Blog</li>
+            <li>FAQs</li>
+            <li>Community</li>
+            </ul>
+        </div>
+        <div class="Horizontal">
+            <span class="Footer-heading">Support</span>
+            <ul>
+            <li>Contact Us</li>
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            </ul>
+        </div>
+        <div class="Horizontal">
+            <span class="Footer-heading">Stay Updated</span>
+            <span>Subscribe to our newsletter and never miss an update.</span>
+        </div>
+        </div>
+        <div class="last">
+        <p>&copy; 2025 Written by Riddhi. All rights reserved.</p>
+        </div>
+  </footer>
+
+</body>
+</html>
+
+
+

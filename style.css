@@ -9,11 +9,12 @@
 .riddhi{
   margin:10px;
 }
+
 /* room-section */
 
 .room-section {
   padding: 40px;
-  background-image: url(background\ wallpaper.jpg);
+  background-image: url(Images/background\ wallpaper.jpg);
   background-size: contain;
 }
 
@@ -119,20 +120,21 @@
 
 .motherhood-support .contact-btn {
   display: inline-block;
-  background-color: #d53d54;
-  color: white;
+  background-color: white;
+  color: #d53d54;
   padding: 12px 24px;
   margin-bottom:5px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  padding: 1rem;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.2rem;
   transition: background-color 0.3s ease;
 }
 
 .motherhood-support .contact-btn:hover {
-  background-color: #fb7fc3;
+  background-color: #e3acaf;
   color: black;
 }
 
@@ -522,7 +524,7 @@ body {
   margin: 0 auto;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   position: relative;
-  background: url('Canva\ poster\ unblurred.png') center/cover no-repeat;
+  background: url('Images/Canva\ poster\ unblurred.png') center/cover no-repeat;
 }
 
 .overlay {
@@ -547,7 +549,7 @@ body {
 }
 
 .tab-button {
-  background-color: #e06174;
+  background-color: #e0979b;
   color: #f8f1f1;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -560,7 +562,7 @@ body {
 }
 
 .tab-button.active {
-  background-color: #e0979b;
+  background-color: #e06174;
   color:whitesmoke;
   box-shadow: none;
 }
