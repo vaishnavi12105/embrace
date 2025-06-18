@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Letters I Never Sent | Embrace</title>
+  <style>
+    body {
+      background: #ffffff;
+      font-family: 'Georgia', serif;
+      margin: 40px;
+      color: #333;
+      position: relative;
+      overflow-x: hidden;
+      display: flex;
+    }
+
+    .affirmation-column {
+      width: 150px;
+      padding: 10px;
+      font-size: 14px;
+      background: #f1e7d5; /*background color*/
+      color: #93386a;
+      font-style: italic;
+      border-radius: 10px;
+      height: 90vh;
+      overflow-y: auto;
+      position: sticky;
+      top: 0;
+    }
+
+    .sidepic{
+      width:120px;
+      padding:10px;
+      
+      height:256px;
+      background:url("https://th.bing.com/th/id/OIP.cVRdQkpOWqRhi2E-gbEVBgDMEy?rs=1&pid=ImgDetMain");
+      background-size:cover;
+      border-radius: 15px;
+    }
+
+    .affirmation-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .affirmation-column li {
+      margin-bottom: 12px;
+    }
+
+    .letter-journal {
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 1.5s ease;
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 40px;
+      text-align: center;
+      letter-spacing: 2px;
+      color: #b3547a;
+      animation: slideDown 1s ease;
+      font-family: 'Playfair Display', serif;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      margin-top: -10px;
+      color: #7a3c58;
+    }
+
+    .date {
+      text-align: right;
+      font-size: 14px;
+      margin: 10px 0 30px;
+    }
+
+    .date input {
+      border: none;
+      border-bottom: 1px solid #888;
+      font-size: 14px;
+      width: 150px;
+    }
+
+    .section {
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section h3 {
+      font-family: 'Georgia', serif;
+      font-size: 22px;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #5c2b3f;
+      width: 100%;
+    }
+
+    .pink { background-color: #e8b9b9; }
+    .lavender { background-color: #e6d3f2; }
+    .blue { background-color: #d2e4f0; }
+    .mint { background-color: #d1f5d3; }
+    .peach { background-color: #ffe5b4; }
+
+    .text-box-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #aaa;
+      font-size: 16px;
+      padding: 10px;
+      resize: vertical;
+      background: transparent;
+      min-height: 120px;
+    }
+
+    .image-box-1 {
+      width: 140px;
+      height: 120px;
+      border: 2px solid #aaa;
+      background:url("https://image3.photobiz.com/8929/9_20210421203142_10403617_large.jpg");
+        border-top-left-radius: 50px;
+      background-size:cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #777;
+      text-align: center;
+      padding: 5px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      margin-top: -10px;
+    }
+    .image-box-2{
+      width: 140px;
+      height: 120px;
+      border: 2px solid #aaa;
+      background:url("https://static.showit.co/1600/Ctmj73vcR6ebMxvWyasXrA/shared/daniellehutchinsonphotography_3_of_67.jpg");
+       background-size:cover;
+      border-top-left-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #777;
+      text-align: center;
+      padding: 5px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      margin-top: -10px;
+
+    }
+    .image-box-3{
+      width: 140px;
+      height: 120px;
+      border: 2px solid #aaa;
+      background:url("https://spin.atomicobject.com/wp-content/uploads/20160318142624/IMG_5674-590x443.jpg");
+      background-size:cover;
+      border-top-left-radius: 50px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #777;
+      text-align: center;
+      padding: 5px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      margin-top: -10px;
+
+    }
+    .image-box-4{
+      width: 140px;
+      height: 120px;
+      border: 2px solid #aaa;
+      background:url("https://th.bing.com/th/id/OIP.91vF0JRmzemQwdiEmTpT3gAAAA?w=400&h=514&rs=1&pid=ImgDetMain");
+      background-size:cover;
+      border-top-left-radius: 50px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #777;
+      text-align: center;
+      padding: 5px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      margin-top: -10px;
+
+    }
+    
+    .image-box-5{
+      width: 140px;
+      height: 120px;
+      border: 2px solid #aaa;
+      background:url("https://img.freepik.com/premium-photo/woman-holds-baby-her-arms_444642-2878.jpg");
+      background-size:cover;
+      border-top-left-radius: 50px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #777;
+      text-align: center;
+      padding: 5px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      margin-top: -10px;
+
+    }
+    
+  </style>
+  </style>
+</head>
+<body>
+
+
+
+    
+
+  <div class="affirmation-column">
+    <ul>
+      <li>You are enough.</li>
+      <li>Your story matters.</li>
+      <li>You are not alone.</li>
+      <li>Healing takes time.</li>
+      <li>Let your heart speak.</li>
+      <li>You’re doing your best.</li>
+      <li>Your strength is beautiful.</li>
+      <li>Hope lives in you.</li>
+      <li>This moment matters.</li>
+      <li>You’re worthy of peace.</li>
+      <li>Your voice is healing.</li>
+    </ul>
+    <div class="sidepic"></div>
+  </div>
+  
+
+  <div class="letter-journal">
+    <h1>Letters I Never Sent</h1>
+    <h2>Unspoken emotions, finally expressed</h2>
+    <div class="date">DATE: <input type="text" placeholder="MM/DD/YYYY"></div>
+
+    <div class="section pink">
+      <h3>To My Baby</h3>
+      <div class="text-box-container">
+        <textarea placeholder="Write everything your heart wishes you could say..."></textarea>
+        <div class="image-box-1"></div>
+      </div>
+    </div>
+
+    <div class="section lavender">
+      <h3>To My Partner</h3>
+      <div class="text-box-container">
+        <textarea placeholder="Express the emotions you haven’t yet shared with your partner..."></textarea>
+        <div class="image-box-2"></div>
+      </div>
+    </div>
+
+    <div class="section blue">
+      <h3>To My Hopes and Fears</h3>
+      <div class="text-box-container">
+        <textarea placeholder="Reflect on the dreams that kept you going and the worries that held you back..."></textarea>
+        <div class="image-box-3"></div>
+      </div>
+    </div>
+
+    <div class="section mint">
+      <h3>To the Support I Craved</h3>
+      <div class="text-box-container">
+        <textarea placeholder="Share the comfort, presence, or words you wished for most..."></textarea>
+        <div class="image-box-4"></div>
+      </div>
+    </div>
+
+    <div class="section peach">
+      <h3>To the Woman I Am Today</h3>
+      <div class="text-box-container">
+        <textarea placeholder="Speak with kindness and strength to yourself in this very moment..."></textarea>
+        <div class="image-box-5"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="affirmation-column">
+    <ul>
+      <li>Breathe. You are healing.</li>
+      <li>Your words are power.</li>
+      <li>Every emotion is sacred.</li>
+      <li>You’re creating light.</li>
+      <li>Peace begins with expression.</li>
+      <li>Your voice is brave.</li>
+      <li>Keep moving forward.</li>
+      <li>You radiate strength.</li>
+      <li>One breath at a time.</li>
+      <li>It's okay to rest.</li>
+      
+    </ul>
+    <div class="sidepic"></div>
+  </div>
+</body>
+</html>

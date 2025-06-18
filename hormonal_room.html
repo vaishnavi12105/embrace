@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resource Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./FAQ/faq.css">
+  <style>
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .dropdown-menu {
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    .dropdown-menu.active,
+    .group:hover .dropdown-menu {
+      opacity: 1;
+      transform: scaleY(1);
+      pointer-events: auto;
+      visibility: visible;
+    }
+
+    .dropdown-toggle.active {
+      color: #000;
+    }
+  </style>
+  
+</head>
+<body>
+
+ <!-- Header -->
+  <div class="bg-[#E37383] text-white text-sm px-4 py-2 flex justify-center md:justify-end gap-4"></div>
+
+  <nav class="bg-white w-full shadow-md px-6 py-4 flex items-center justify-between flex-wrap sticky top-0 z-50">
+    <div class="flex items-center gap-2">
+      <img src="Images/logo.png" alt="Logo" class="h-10 w-10 object-contain" />
+      <span class="font-serif font-bold text-2xl tracking-wider">Embrace</span>
+    </div>
+
+    <div class="hidden md:flex gap-6 text-[#4b2e2e] font-medium">
+      <div class="relative group cursor-pointer">
+        <span class="dropdown-toggle font-semibold text-black flex items-center">About Us <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
+          <a href="#trying" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Our Mission</a>
+          <a href="#trying2" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Why Choose Us?</a>
+        </div>
+      </div>
+
+      <div class="relative group cursor-pointer">
+        <span class="dropdown-toggle font-semibold text-black flex items-center">What We Treat <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
+          <a href="./post1.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Postpartum Depression</a>
+          <a href="./post2.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Stress and Emotional Burnout</a>
+          <a href="./post3.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Birth Trauma and PTSD Treatment</a>
+        </div>
+      </div>
+
+      <div class="relative group cursor-pointer">
+        <span class="dropdown-toggle font-semibold text-black flex items-center">Our Rooms <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Loss Room</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Hormonal Room</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">New Mom Room</a>
+        </div>
+      </div>
+
+      <div class="relative group cursor-pointer">
+        <span class="dropdown-toggle font-semibold text-black flex items-center">Connect <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
+          <a href="./therapist.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">One-on-One Healing</a>
+          <a href="./support.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Community Support</a>
+        </div>
+      </div>
+
+      <span class="font-semibold text-black cursor-pointer">Your Journal</span>
+    </div>
+  </nav>
+
+  <div class="pt-20"> <!-- Add padding to push content below fixed nav -->
+    <div class="quote-box">
+      <p class="loss-quote">You are welcome here. Everything you're feeling is valid. This is your safe space to understand and embrace your hormonal health.</p>
+      <p class="intro-to-page">Living with PCOS or anxiety can feel overwhelming, frustrating, and often misunderstood — especially when the symptoms are invisible to the world around you. This space exists to hold that experience gently. Whether you're seeking answers, comfort, or simply a place to feel seen and heard, you belong here. Through shared stories, helpful resources, and a nurturing community, we hope this page offers you a moment of clarity, connection, and compassion as you navigate your journey.</p>
+    </div>
+  </div>
+
+
+<section class="grief-section">
+  <div class="grief-container">
+    <div class="grief-box">
+      <h3 class="grief-heading">Understanding PCOS & Anxiety</h3>
+      <p class="grief-text">
+        PCOS and anxiety are more than physical or mental conditions — they shape your daily life, self-image, and emotional well-being. The irregular cycles, sudden mood swings, weight fluctuations, and constant overthinking can make it hard to feel in control. Anxiety may whisper doubts, and PCOS may leave you questioning your body. This is not your fault. Your feelings are not overreactions — they are valid responses to real challenges. Understanding your body and your mind is a powerful first step. These conditions may not define you, but acknowledging them allows you to start reclaiming peace, one small, kind choice at a time. You’re not broken. You’re learning how to support a body and mind that are asking for gentleness and care.
+      </p>
+    </div>
+    <div class="grief-box">
+      <h3 class="grief-heading">Finding Your Way Forward</h3>
+      <p class="grief-text">
+        There is no one-size-fits-all path when it comes to managing PCOS and anxiety — healing looks different for everyone. Some days you may feel strong, others may feel like a struggle just to get through. That’s okay. Progress isn’t always visible. Maybe it's showing up to appointments, choosing nourishing food, reaching out for support, or simply resting when your body asks for it. Each small action matters. You deserve to feel whole, to feel heard, and to feel hope. You are not alone in this — many others are walking a similar path, and their strength echoes yours. The journey ahead may have ups and downs, but with the right support, knowledge, and kindness toward yourself, you can thrive — not in spite of your struggles, but alongside them.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <div class="fancy-divider">
+    <span class="line"></span>
+    <span class="symbol">&#8764;</span> <!-- Tilde Operator -->
+    <span class="symbol">&#9670;</span> <!-- Black Diamond -->
+    <span class="symbol">&#8764;</span>
+    <span class="line"></span>
+  </div>
+
+  <div class="resource-intro">
+    <h4 class="resource-heading">Explore Resources</h4>
+    <p>
+      Explore a verified selection of articles, podcasts, books, and videos designed to support you in understanding and managing PCOS and anxiety. All resources are carefully chosen to inform, comfort, and empower you on your wellness journey.
+    </p>
+  </div>
+
+  <div class="pt-1">
+    <div class="resource-tabs" id="navbar">
+      <div class="slider" id="slider"></div>
+      <button data-index="0">Articles</button>
+      <button data-index="1">Podcasts</button>
+      <button data-index="2">Books</button>
+      <button data-index="3">Videos</button>
+    </div>
+  </div>
+
+<!-- Topic 0: Articles -->
+  <div class="grid active" id="topic-0">
+    <div class="card">
+      <img src="Images/woman_stressed.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Articles</div>
+        <div class="card-title">Living with PCOS: What Your Body’s Telling You</div>
+        <div class="card-desc">An in-depth look at the hormonal imbalances behind PCOS and how to listen to your body's signals without shame or fear.</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/woman_sad3.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Articles</div>
+        <div class="card-title">Anxiety Isn’t Just in Your Head</div>
+        <div class="card-desc">This article breaks down how anxiety shows up in the body and mind, and what you can do to gently manage it day by day.</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/woman_sad2.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Articles</div>
+        <div class="card-title">Breaking the PCOS-Anxiety Cycle</div>
+        <div class="card-desc">Learn how PCOS and anxiety are connected, and how you can begin to interrupt the spiral with holistic, sustainable strategies.</div>
+      </div>
+    </div>
+  </div>
+
+<!-- Topic 1: Podcasts -->
+  <div class="grid hidden" id="topic-1">
+    <div class="card">
+      <img src="Images/podcast1.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Podcasts</div>
+        <div class="card-title">Hormonal: The PCOS Diaries</div>
+        <div class="card-desc">Honest conversations with women navigating PCOS — from diagnosis shock to building body confidence and hormonal harmony.</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/podcast2.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Podcasts</div>
+        <div class="card-title">Anxiety Reset with Georgie Collinson</div>
+        <div class="card-desc">A therapist's toolkit on calming the anxious mind, understanding triggers, and reclaiming a sense of peace and control.</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/woman_struggling.jpg"alt="">
+      <div class="card-content">
+        <div class="card-category">Podcasts</div>
+        <div class="card-title">Healing Hormones</div>
+        <div class="card-desc">Episodes that explore the science of hormones, the impact of lifestyle on PCOS, and how to emotionally support yourself through it all.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Topic 2: Books -->
+  <div class="grid hidden" id="topic-2">
+    <div class="card">
+      <img src="Images/books1.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Books</div>
+        <div class="card-title">8 Steps to Reverse Your PCOS</div>
+        <div class="card-desc">A science-backed guide by Dr. Fiona McCulloch offering holistic strategies to balance hormones and regain control over your body.</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/woman_crying5.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Books</div>
+        <div class="card-title">The Anxiety Toolkit</div>
+        <div class="card-desc">A practical and compassionate guide by Dr. Alice Boyes to help you break patterns of overthinking, fear, and emotional spirals.</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/books3.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Books</div>
+        <div class="card-title">Period Repair Manual</div>
+        <div class="card-desc">A must-read by Lara Briden that empowers women to understand their cycles, manage PCOS naturally, and restore hormonal balance.</div>
+      </div>
+    </div>
+  </div>
+
+<!-- Topic 3: Videos -->
+  <div class="grid hidden" id="topic-3">
+    <div class="card">
+      <img src="Images/videos1.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Videos</div>
+        <div class="card-title">What Is PCOS?</div>
+        <div class="card-desc">An animated explainer that breaks down the symptoms, causes, and treatment options for PCOS in a clear and friendly way.</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/videos2.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Videos</div>
+        <div class="card-title">Anxiety and the Nervous System</div>
+        <div class="card-desc">This calming video explores how anxiety affects your brain and body, and shares gentle practices to soothe your system.</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/woman_sad.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Videos</div>
+        <div class="card-title">Healing PCOS: A Lifestyle Approach</div>
+        <div class="card-desc">Real women share their journeys managing PCOS through diet, movement, mindset, and self-compassion. A hopeful and inspiring documentary.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Other's Experiences -->
+  <section class="story-carousel-section">
+    <h2 class="story-carousel-heading">Real Stories, Real Strength</h2>
+    <div class="story-box">
+      <div id="story-text" class="story-text"></div>
+      <div id="story-author" class="story-author"></div>
+    </div>
+    <div class="story-buttons">
+      <button onclick="prevStory()" class="story-nav-btn">← Previous</button>
+      <button onclick="nextStory()" class="story-nav-btn">Next →</button>
+    </div>
+  </section>
+
+<!-- Send a Letter -->
+  <section class="healing-new">
+    <div class="healing-new-content">
+      <div class="healing-new-image">
+        <img src="Images/letter.jpg" alt="Letter Illustration">
+      </div>
+
+      <div class="healing-new-text">
+        <h2 class="healing-new-heading">A Space for Healing</h2>
+        <p class="healing-new-subtext">
+          This is your quiet corner — to process, to reflect, to release. 
+          Write a letter to your body, to your past self, or to the anxious voice in your head.
+          <br>
+          No filters. Just your honesty, your resilience, your heart.
+        </p>
+
+        <div class="healing-new-boxes">
+          <div class="healing-box">Say what you've been holding in. To your fear. To yourself.</div>
+          <div class="healing-box">This isn’t about being ‘strong’ all the time. It’s about being real. Write freely.</div>
+          <div class="healing-box">Let your body know it’s not your enemy. Let your thoughts breathe on paper.</div>
+          <div class="healing-box">Your journey is yours alone. But your voice matters — loud or soft, messy or calm.</div>
+        </div>
+        <a href="Images/letter.html" class="healing-new-link">
+          <button class="healing-new-button">Write Your Letter</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<!-- therapy and support groups section -->
+  <section class="support-therapy-section">
+    <div class="overlay">
+      <div class="support-container">
+        <div class="tabs">
+          <button class="tab-button active" onclick="showTab('community')">Community Support</button>
+          <button class="tab-button" onclick="showTab('therapy')">Private Therapy</button>
+        </div>
+
+        <div id="community" class="tab-content active">
+          <h3>Support Through Shared Stories</h3>
+          <p>
+            It helps to know you're not alone in what you're feeling. Connect with others navigating PCOS, hormonal imbalances, or anxiety. Our support circles are safe spaces to talk openly — with no judgment, just shared understanding and strength.
+          </p>
+          <a href="./support.html" class="tab-link">Join the Support Group</a>
+        </div>
+
+        <div id="therapy" class="tab-content">
+          <h3>Personal Guidance and Care</h3>
+          <p>
+            If you need someone to talk to in a private, focused space — therapy might be the path for you. With the help of compassionate professionals, you can untangle your thoughts, manage anxiety, and feel more connected to your body and self.
+          </p>
+          <a href="./therapist.html" class="tab-link">Explore Therapy Options</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll('.resource-tabs button');
+      const grids = document.querySelectorAll('.grid');
+      const slider = document.getElementById('slider');
+
+      const buttonCount = buttons.length;
+      slider.style.width = `${100 / buttonCount}%`;
+      slider.style.left = '0%'; // First button
+
+      buttons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+          slider.style.left = `${(index * 100) / buttonCount}%`;
+
+          grids.forEach((grid, i) => {
+            if (i === index) {
+              grid.classList.remove('hidden');
+              grid.classList.add('active');
+            } else {
+              grid.classList.add('hidden');
+              grid.classList.remove('active');
+            }
+          });
+        });
+      });
+    });
+
+    const stories = [
+      {
+        text: "When I was first diagnosed with PCOS, I felt completely overwhelmed. Nobody talks about how exhausting it is—physically and mentally. The weight gain, the irregular periods, the constant anxiety. But through support groups and slowly learning to listen to my body, I started building compassion for myself. It’s still hard, but I’m learning to celebrate progress over perfection.",
+        author: "~ Rhea"
+      },
+      {
+        text: "Some days, my anxiety makes getting out of bed feel like climbing a mountain. And with PCOS, my hormones make it even harder. But I’ve started tracking my cycle, meditating, and writing things down—and it’s helped. I'm still figuring things out, but I no longer feel like I’m fighting my body. I’m trying to work with it instead.",
+        author: "~ Mahi"
+      },
+      {
+        text: "Doctors dismissed my symptoms for years. I thought maybe I was just lazy or dramatic. When I finally got diagnosed with PCOS, I cried—not just from the diagnosis, but from the relief of being *heard*. Now, I’m working with a therapist and a nutritionist, and I’ve joined an online support circle. Knowing I’m not alone changed everything.",
+        author: "~ Anushka"
+      },
+      {
+        text: "The acne, the hair fall, the mood swings... I used to hate looking in the mirror. I blamed my body constantly. But journaling helped me talk to myself differently. I started writing letters to my body like it was a friend. I still have bad days, but now I also have grace for myself.",
+        author: "~ Diya"
+      }
+    ];
+
+    let currentIndex = 0;
+
+    function displayStory(index) {
+      document.getElementById("story-text").innerText = `"${stories[index].text}"`;
+      document.getElementById("story-author").innerText = stories[index].author;
+    }
+
+    function nextStory() {
+      currentIndex = (currentIndex + 1) % stories.length;
+      displayStory(currentIndex);
+    }
+
+    function prevStory() {
+      currentIndex = (currentIndex - 1 + stories.length) % stories.length;
+      displayStory(currentIndex);
+    }
+
+    // Display the first story initially
+    window.onload = () => {
+      displayStory(currentIndex);
+    };
+
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+
+
+
+
+   <footer>
+    <div class="footer-top">
+      <span>Connect with us on social media</span>
+      <span class="icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </span>
+    </div>
+    <hr>
+    <div class="footer-bottom">
+      <div class="Horizontal">
+        <span class="Footer-heading">About Us</span>
+        <span>We are a community promoting cybersecurity education in a fun and professional way.</span>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Resources</span>
+        <ul>
+          <li>Blog</li>
+          <li>FAQs</li>
+          <li>Community</li>
+        </ul>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Support</span>
+        <ul>
+          <li>Contact Us</li>
+          <li>Help Center</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Stay Updated</span>
+        <span>Subscribe to our newsletter and never miss an update.</span>
+      </div>
+    </div>
+    <div class="last">
+      <p>&copy; 2025 Written by Riddhi. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Echoes - Unspoken Confessions</title>
+  <link rel="stylesheet" href="./FAQ/faq.css">
+  <style>
+    :root {
+      --primary: #e91e63;
+      --bg-light: #fff0f5;
+      --text-color: #333;
+      --card-bg: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      background-color: var(--primary);
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 10px var(--shadow);
+    }
+
+    #echoes-container {
+
+  position: relative;
+  width: 100%;
+  height: 75vh; /* Increased height */
+  background: #ffeef3;
+  overflow: hidden;
+  padding-bottom: 100px; /* Ensures floating boxes don't go behind the input box */
+
+
+    }
+
+    .floating-text {
+      position: absolute;
+      width: 90%;
+      max-width: 280px;
+      background-color: var(--card-bg);
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px var(--shadow);
+      border: 2px solid var(--primary);
+      color: var(--text-color);
+      font-size: 1rem;
+      opacity: 0.95;
+      transition: transform 0.1s linear;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    .like-btn {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 1rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .like-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .input-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+      background-color: white;
+      box-shadow: 0 -4px 10px var(--shadow);
+    }
+
+    .input-box form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      width: 100%;
+      max-width: 800px;
+      align-items: center;
+    }
+
+    .input-box textarea {
+      flex: 1;
+      resize: none;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Segoe UI', sans-serif;
+      min-width: 200px;
+    }
+
+    .input-box button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .input-box button:hover {
+      background-color: #d81b60;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.5rem;
+      }
+
+      .floating-text {
+        font-size: 0.9rem;
+        max-width: 90vw;
+      }
+
+      .input-box form {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+
+  
+  </style>
+  <link rel="stylesheet" href="./FAQ//faq.css">
+</head>
+<body>
+
+  <header>Echoes: Unspoken Confessions</header>
+
+  <div id="echoes-container"></div>
+
+  <div class="input-box">
+    <form id="echo-form">
+      <textarea id="confession" rows="2" placeholder="Share something you can't say out loud..." required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script>
+    const container = document.getElementById('echoes-container');
+    const form = document.getElementById('echo-form');
+    const textarea = document.getElementById('confession');
+
+    const presetMessages = [
+      "I love my child, but I miss my old life sometimes.",
+      "I'm scared I'm not doing enough.",
+      "Why does no one talk about postpartum anxiety?",
+      "Some days I just want to cry and not explain why.",
+      "I feel guilty taking time for myself.",
+      "It’s exhausting to always pretend I’m okay.",
+      "I miss silence, peace, and being just me.",
+      "I want to scream but don’t want to scare anyone."
+    ];
+
+    const messages = [];
+
+    function formatTimestamp() {
+      const now = new Date();
+      return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function createFloatingMessage(text) {
+      const box = document.createElement('div');
+      box.classList.add('floating-text');
+
+      const content = document.createElement('div');
+      content.textContent = text;
+
+      const meta = document.createElement('div');
+      meta.className = 'meta';
+
+      const time = document.createElement('span');
+      time.textContent = formatTimestamp();
+
+      const likeBtn = document.createElement('button');
+      likeBtn.className = 'like-btn';
+      likeBtn.innerHTML = `❤️ <span class="count">0</span>`;
+      likeBtn.addEventListener('click', () => {
+        const countSpan = likeBtn.querySelector('.count');
+        countSpan.textContent = parseInt(countSpan.textContent) + 1;
+      });
+
+      meta.appendChild(time);
+      meta.appendChild(likeBtn);
+      box.appendChild(content);
+      box.appendChild(meta);
+
+      const containerWidth = container.clientWidth;
+      const containerHeight = container.clientHeight;
+
+      const x = 10 + Math.random() * (containerWidth - 300);
+      const y = 10 + Math.random() * (containerHeight - 120);
+      const dx = (Math.random() - 0.5) * 0.25;
+      const dy = (Math.random() - 0.5) * 0.25;
+
+      const messageObj = { el: box, x, y, dx, dy, width: 280, height: 110 };
+      messages.push(messageObj);
+      container.appendChild(box);
+    }
+
+    function animate() {
+  const containerWidth = container.clientWidth;
+  const containerHeight = container.clientHeight;
+
+  messages.forEach((m1, i) => {
+    m1.x += m1.dx;
+    m1.y += m1.dy;
+
+    // Bounce off container edges
+    if (m1.x <= 0 || m1.x + m1.width >= containerWidth) m1.dx *= -1;
+    if (m1.y <= 0 || m1.y + m1.height >= containerHeight) m1.dy *= -1;
+
+    // Avoid overlapping with other messages
+    for (let j = 0; j < messages.length; j++) {
+      if (i !== j) {
+        const m2 = messages[j];
+        const dx = m1.x - m2.x;
+        const dy = m1.y - m2.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        const minDistance = 140;
+
+        if (distance < minDistance) {
+          // Repel both messages slightly
+          const angle = Math.atan2(dy, dx);
+          const moveAmount = (minDistance - distance) / 2;
+
+          m1.x += Math.cos(angle) * moveAmount;
+          m1.y += Math.sin(angle) * moveAmount;
+          m2.x -= Math.cos(angle) * moveAmount;
+          m2.y -= Math.sin(angle) * moveAmount;
+
+          // Adjust velocity a bit to avoid sticking
+          m1.dx = -m1.dx;
+          m1.dy = -m1.dy;
+          m2.dx = -m2.dx;
+          m2.dy = -m2.dy;
+        }
+      }
+    }
+
+    m1.el.style.transform = `translate(${m1.x}px, ${m1.y}px)`;
+  });
+
+  requestAnimationFrame(animate);
+}
+
+    window.addEventListener('DOMContentLoaded', () => {
+      presetMessages.forEach(msg => createFloatingMessage(msg));
+      animate();
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const text = textarea.value.trim();
+      if (!text) return;
+      createFloatingMessage(text);
+      textarea.value = '';
+    });
+  </script>
+
+  <footer>
+    <div class="footer-top">
+      <span>Connect with us on social media</span>
+      <span class="icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </span>
+    </div>
+    <hr>
+    <div class="footer-bottom">
+      <div class="Horizontal">
+        <span class="Footer-heading">About Us</span>
+        <span>We are a community promoting cybersecurity education in a fun and professional way.</span>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Resources</span>
+        <ul>
+          <li>Blog</li>
+          <li>FAQs</li>
+          <li>Community</li>
+        </ul>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Support</span>
+        <ul>
+          <li>Contact Us</li>
+          <li>Help Center</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Stay Updated</span>
+        <span>Subscribe to our newsletter and never miss an update.</span>
+      </div>
+    </div>
+    <div class="last">
+      <p>&copy; 2025 Written by Ruzal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="faq.js"></script>
+</body>
+</html>

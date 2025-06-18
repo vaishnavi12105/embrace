@@ -2,145 +2,441 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resource Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <style>
-    .font-serif {
-      font-family: 'Playfair Display', serif;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./FAQ/faq.css">
+  
 </head>
-<body class="bg-[#E37383]">
+<body>
 
-  <!-- Sticky Navbar -->
-  <div class="sticky top-0 z-50 bg-white shadow-md">
-    <!-- Top bar -->
-    <div class="bg-[#E37383] text-white text-sm px-4 py-2 flex justify-center md:justify-end gap-4">
-      <div class="flex items-center gap-1">
-         <span class="font-bold"></span>
+  <!-- Top bar -->
+  <div class="bg-[#E37383] text-white text-sm px-4 py-2 flex justify-center md:justify-end gap-4">
+    <div class="flex items-center gap-1">
+       <span class="font-bold"></span>
+    </div>
+    <div class="hidden md:inline"></div>
+    <div></div>
+  </div>
+
+  <!-- Navbar -->
+   <!-- Top pink strip -->
+  <div class="w-full h-[12px] bg-[#e37378] fixed top-0 left-0 z-50"></div>
+
+  <nav class="bg-white w-full shadow-md px-6 py-3 flex items-center justify-between flex-wrap fixed top-[6px] left-0 z-40">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <img src="Images/logo.png" alt="Logo" class="h-10 w-10 object-contain" />
+      <span class="font-serif font-bold text-2xl tracking-wider">Embrace</span>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="md:hidden text-[#4b2e2e]" id="menu-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" 
+          viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Nav Links -->
+    <div id="menu" class="hidden w-full md:flex md:w-auto flex-col md:flex-row gap-6 text-[#4b2e2e] font-medium mt-4 md:mt-0">
+      <div class="relative group cursor-pointer">
+        <span class="font-semibold text-black">About Us</span>
+        <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Our Mission</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Who We Are</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">The Postpartum Difference</a>
+        </div>
+      </div>
+
+      <div class="relative group cursor-pointer">
+        <span>What We Treat</span>
+        <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Postpartum Depression</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Stress and Emotional Burnout</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Birth Trauma and PTSD Treatment</a>
+        </div>
+      </div>
+
+      <div class="relative group cursor-pointer">
+        <span>Our Rooms</span>
+        <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Loss Room</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Hormonal Room</a>
+          <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">New Mom Room</a>
+        </div>
+      </div>
+
+      <a href="#" class="cursor-pointer">Connect</a>
+      <a href="#" class="cursor-pointer">Your Journal</a>
+    </div>
+  </nav>
+
+    <div class="pt-20"> <!-- Add padding to push content below fixed nav -->
+      <div class="quote-box">
+        <p class="loss-quote">You are welcome here. Everything you're feeling is valid. This is your safe space to begin healing.</p>
+        <p class="intro-to-page">Grief after loss can feel isolating, confusing, and painfully silent especially when the world moves on around you. This space exists to honor that quiet pain. Whether you're looking for understanding, comfort, or simply a place to feel seen, you're not alone here. Through shared stories, gentle resources, and a supportive community, we hope this page becomes a small step toward healing in your own time, and your own way.</p>
       </div>
     </div>
 
-    <!-- Navbar -->
-    <nav class="w-full px-6 py-4 flex items-center justify-between flex-wrap">
-      <!-- Logo -->
-      <div class="flex items-center gap-2">
-        <img src="Images/logo.png" alt="Logo" class="h-10 w-10 object-contain" />
-        <span class="font-serif font-bold text-2xl tracking-wider">Embrace</span>
-      </div>
-
-      <!-- Nav Links -->
-      <div class="hidden md:flex gap-6 text-[#4b2e2e] font-medium">
-        <div class="relative group cursor-pointer">
-          <span class="font-semibold text-black">About Us</span>
-          <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
-            <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Our Mission</a>
-            <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Who We Are</a>
-            <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">The Postpartum Difference</a>
-          </div>
-        </div>
-
-        <div class="relative group cursor-pointer">
-          <span>What We Treat</span>
-          <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
-            <a href="./post1.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Postpartum Depression</a>
-            <a href="./post2.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Stress and Emotional Burnout</a>
-            <a href="./post3.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Birth Trauma and PTSD Treatment</a>
-          </div>
-        </div>
-
-        <div class="relative group cursor-pointer">
-          <span>Our Rooms</span>
-          <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50">
-            <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Loss Room</a>
-            <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Hormonal Room</a>
-            <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">New Mom Room</a>
-          </div>
-        </div>
-
-        <div class="relative group cursor-pointer">
-          <span>Connect</span>
-        </div>
-
-        <div class="relative group cursor-pointer">
-          <span>Your Journal</span>
-        </div>
-      </div>
-    </nav>
+    
+  <section class="grief-section">
+  <div class="grief-container">
+    <div class="grief-box">
+      <h3 class="grief-heading">Understanding Grief</h3>
+      <p class="grief-text">
+        Grief is a complex, deeply personal journey — one that often feels isolating, unpredictable, and exhausting. It doesn’t follow a straight line or a set timeline. One moment you may feel numb, and the next overcome with sadness, guilt, or even anger. These emotions are not wrong; they’re signs of the deep love and connection you held. Grief can shake your sense of reality, leaving you searching for answers, for meaning, for peace. But it's important to understand that your grief is not a burden — it’s a reflection of what mattered. You don’t need to minimize your pain or rush to ‘move on’. Healing doesn’t mean forgetting. It means learning how to carry the memory, how to keep living even when part of you is changed forever. You are allowed to feel it all — the love, the longing, the confusion. This is your path, and no one else can define it for you.
+      </p>
+    </div>
+    <div class="grief-box">
+      <h3 class="grief-heading">Finding Your Way Forward</h3>
+      <p class="grief-text">
+        In the midst of sorrow, it can be hard to believe that light could ever reach you again — but healing is not the absence of grief, it’s learning how to live with it. There will come a time when the ache softens, and your memories feel more like gentle reminders than heavy weights. This journey doesn’t erase what you’ve lost, but it can reshape how you carry it. You may find comfort in reflection, in connection with others, or simply in the quiet moments where you allow yourself to just be. There is no need to pretend you're okay — seeking support is a form of strength. In giving yourself permission to mourn fully, you also give yourself permission to heal. One day, joy will return, not because your grief disappeared, but because love makes space for both sorrow and hope. You are not alone in this. Even in pain, you are moving — slowly, bravely — toward peace.
+      </p>
+    </div>
   </div>
-    <section class="loss-room-section">
-        <div class="quote-box">
-            <p class="loss-quote">You are welcome here. Everything you're feeling is valid. This is your safe space to begin healing.</p>
-        </div>
-
-        <div class="resource-intro">
-            <p>
-            Explore a verified selection of articles, podcasts, books, and videos designed to support you on your journey of grief and healing. All resources are carefully chosen for their relevance and helpfulness.
-            </p>
-        </div>
-
-        <div class="resource-tabs">
-            <input type="radio" name="tabset" id="tab-articles" checked>
-            <label for="tab-articles" class="tab-label">Articles</label>
-
-            <input type="radio" name="tabset" id="tab-podcasts">
-            <label for="tab-podcasts" class="tab-label">Podcasts</label>
-
-            <input type="radio" name="tabset" id="tab-books">
-            <label for="tab-books" class="tab-label">Books</label>
-
-            <input type="radio" name="tabset" id="tab-videos">
-            <label for="tab-videos" class="tab-label">Videos</label>
-
-            <div class="tab-slider"></div>
-        </div>
-
-        <div class="articles-content">
-            <div class="resource-box">
-            <img src="Images/article-image1.jpg" alt="Grief Education">
-            <h5>Grief Education</h5>
-            <h3>Understanding Grief After Loss</h3>
-            <p>Learn about the emotional journey and find clarity during hard times.</p>
-            </div>
-            <div class="resource-box">
-            <img src="article-image2.jpg" alt="Self Help">
-            <h5>Self Help</h5>
-            <h3>Coping Strategies for Difficult Days</h3>
-            <p>Discover practical tools to ease daily emotional stress.</p>
-            </div>
-            <div class="resource-box">
-            <img src="article-image3.jpg" alt="Support Others">
-            <h5>Support Others</h5>
-            <h3>Supporting a Loved One Through Loss</h3>
-            <p>Guidance for being there when someone else is grieving.</p>
-            </div>
-            
-        </div>
-
-        <div class="podcasts-content">
-            <div class="podcast-box">
-                <h3 class="podcast-title">The Other Mothers</h3>
-                <p class="podcast-description">This podcast, hosted by Teddy's Wish patrons Caro Tasker and Elle Wright, along with Co-Founder Jen Reid, features stories of baby loss and journeys to life after loss, along with guest speakers.</p>
-            </div>
-
-            <div class="podcast-box">
-                <h3 class="podcast-title">The Parent Hood Podcast</h3>
-                <p class="podcast-description">Hosted by Marina Fogle, this podcast features conversations about supporting grieving parents, including insights from Teddy's Wish and founder of Child Bereavement UK, Jenni Thomas.</p>
-            </div>
-
-            <div class="podcast-box">
-                <h3 class="podcast-title">Still A Part of Us</h3>
-                <p class="podcast-description">This podcast is a platform for parents to share their birth stories of children who were stillborn or died in infancy.</p>
-            </div>
-        </div>
-
-        
-
 </section>
 
+  <div class="fancy-divider">
+    <span class="line"></span>
+    <span class="symbol">&#8764;</span> <!-- Tilde Operator -->
+    <span class="symbol">&#9670;</span> <!-- Black Diamond -->
+    <span class="symbol">&#8764;</span>
+    <span class="line"></span>
+  </div>
+
+  <div class="resource-intro">
+    <h4 class="resource-heading">Explore Resources</h4>
+    <p>
+      Explore a verified selection of articles, podcasts, books, and videos designed to support you on your journey of grief and healing. All resources are carefully chosen for their relevance and helpfulness.
+    </p>
+  </div>
+
+
+  <div class="pt-1">
+  <div class="resource-tabs" id="navbar">
+    <div class="slider" id="slider"></div>
+    <button data-index="0">Articles</button>
+    <button data-index="1">Podcasts</button>
+    <button data-index="2">Books</button>
+    <button data-index="3">Videos</button>
+  </div>
+  </div>
+
+  <!-- Topic 0: Articles -->
+  <div class="grid active" id="topic-0">
+    <div class="card">
+      <img src="Images/woman_crying2.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Articles</div>
+        <div class="card-title">The Silent Grief of Miscarriage</div>
+        <div class="card-desc">Understanding the emotional and psychological toll miscarriage takes on parents.</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/woman_crying3.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Articles</div>
+        <div class="card-title">Stillbirth: Breaking the Silence</div>
+        <div class="card-desc">A powerful exploration of the stigma surrounding stillbirth and parental grief.</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/woman_crying4.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Articles</div>
+        <div class="card-title">Stillbirth: prevention and supportive bereavement care</div>
+        <div class="card-desc">A review of bereavement care best practices and why sensitive support for stillbirth is essential</div>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Topic 1: Podcasts -->
+  <div class="grid hidden" id="topic-1">
+    <div class="card">
+      <img src="Images/podcast1.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Podcasts</div>
+        <div class="card-title">Sisters in Loss</div>
+        <div class="card-desc">Real stories about pregnancy loss and healing through faith.</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/podcast2.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Podcasts</div>
+        <div class="card-title">The Miscarriage Therapist</div>
+        <div class="card-desc">A licensed therapist talks through the trauma, recovery, and community after loss.
+      </div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/podcast3.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Podcasts</div>
+        <div class="card-title">Stitches Podcast: Navigating miscarriage, stillbirth, and infant loss</div>
+        <div class="card-desc">Episodes include conversations on healing through photography, triggers, and how partners cope after loss .</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Topic 2: Books -->
+  <div class="grid hidden" id="topic-2">
+    <div class="card">
+      <img src="Images/books1.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Books</div>
+        <div class="card-title">An Exact Replica of a Figment of My Imagination</div>
+        <div class="card-desc">A deeply moving memoir of stillbirth, grief, and resilience by Elizabeth McCracken.</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/books2.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Books</div>
+        <div class="card-title">At a Loss</div>
+        <div class="card-desc">A compassionate guide to navigating life after miscarriage, stillbirth, or infant death.
+      </div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/books3.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Books</div>
+        <div class="card-title">Still Life: A Parent's Memoir of Life After Stillbirth and Miscarriage (by Emma Mellon)</div>
+        <div class="card-desc">A personal, candid remembrance of grief, anger, and resilience—not a guide, but a trusted friend .</div>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Topic 3: Videos -->
+  <div class="grid hidden" id="topic-3">
+    <div class="card">
+      <img src="Images/videos1.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Videos</div>
+        <div class="card-title">Stillbirth Stories</div>
+        <div class="card-desc">Women share their stillbirth experiences in this raw, honest short documentary.</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/videos2.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Videos</div>
+        <div class="card-title">Grieving Pregnancy Loss</div>
+        <div class="card-desc">A gentle video resource helping families understand and process their grief.</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/videos3.jpg" alt="">
+      <div class="card-content">
+        <div class="card-category">Videos</div>
+        <div class="card-title">America's Stillbirth Crisis: Before a Breath</div>
+        <div class="card-desc"> Full documentary following three mothers, exploring stillbirth experiences, awareness, and systemic issues .</div>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Other's Experiences -->
+  <section class="story-carousel-section">
+    <h2 class="story-carousel-heading">Real Stories, Real Hope</h2>
+    <div class="story-box">
+      <div id="story-text" class="story-text"></div>
+      <div id="story-author" class="story-author"></div>
+    </div>
+    <div class="story-buttons">
+      <button onclick="prevStory()" class="story-nav-btn">← Previous</button>
+      <button onclick="nextStory()" class="story-nav-btn">Next →</button>
+    </div>
+  </section>
+
+
+  <!-- Send a Letter -->
+  <section class="healing-new">
+    <div class="healing-new-content">
+      <div class="healing-new-image">
+        <img src="Images/letter.jpg" alt="Letter Illustration">
+      </div>
+
+      <div class="healing-new-text">
+        <h2 class="healing-new-heading">A Space for Healing</h2>
+        <p class="healing-new-subtext">
+          This is your sanctuary, a quiet place to say what was left unsaid.
+          Here, you can write a letter to your unborn or lost baby, to grieve, to remember, to heal.
+          <br>
+          You don't need perfect words, just your TRUTH, your LOVE, your VOICE.
+        </p>
+
+        <div class="healing-new-boxes">
+          <div class="healing-box">This is your space. Your voice, your letter. Say everything you held back.</div>
+          <div class="healing-box">You don't need permission to grieve. Write to heal. Write to remember.</div>
+          <div class="healing-box">etting your heart speak can be the first step toward closure.</div>
+          <div class="healing-box">A love that deep doesn't disappear. Let it speak, on your terms, in your words.</div>
+        </div>
+        <a href="Images/letter.html" class="healing-new-link">
+          <button class="healing-new-button">Write Your Letter</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- therapy and support groups section -->
+  <section class="support-therapy-section">
+     <div class="overlay">
+       <div class="support-container">
+    <div class="tabs">
+      <button class="tab-button active" onclick="showTab('community')">Community Support</button>
+      <button class="tab-button" onclick="showTab('therapy')">Private Therapy</button>
+    </div>
+
+    <div id="community" class="tab-content active">
+      <h3>Find Comfort in Community</h3>
+      <p>
+        Sometimes, healing begins with knowing you're not alone. Join a space where others who have experienced similar losses come together to share, support, and uplift each other. These safe circles offer warmth, connection, and a shared understanding of grief that can help you find your footing again.
+      </p>
+      <a href="support-group.html" class="tab-link">Join the Support Group</a>
+    </div>
+
+    <div id="therapy" class="tab-content">
+      <h3>One-on-One Healing</h3>
+      <p>
+        Your journey is uniquely yours. If you feel more at ease opening up in a private, professional setting, therapy can provide personalized guidance. Connect with trained professionals who can help you navigate loss, trauma, and healing in a space that's just for you.
+      </p>
+      <a href="therapy.html" class="tab-link">Explore Therapy Options</a>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll('.resource-tabs button');
+      const grids = document.querySelectorAll('.grid');
+      const slider = document.getElementById('slider');
+
+      const buttonCount = buttons.length;
+      slider.style.width = `${100 / buttonCount}%`;
+      slider.style.left = '0%'; // First button
+
+      buttons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+          slider.style.left = `${(index * 100) / buttonCount}%`;
+
+          grids.forEach((grid, i) => {
+            if (i === index) {
+              grid.classList.remove('hidden');
+              grid.classList.add('active');
+            } else {
+              grid.classList.add('hidden');
+              grid.classList.remove('active');
+            }
+          });
+        });
+      });
+    });
+
+    const stories = [
+      {
+        text: "After losing my baby at 16 weeks, I couldn’t imagine ever feeling joy again. The silence in the nursery, the emptiness in my arms—it consumed me. But slowly, through long walks, gentle journaling, and support groups filled with others who truly understood, I began to feel moments of light. Not every day is perfect, but I no longer feel guilty for laughing, living, or loving again. Healing doesn’t mean forgetting.",
+        author: "~ Ananya"
+      },
+      {
+        text: "We had named him Arjun before he was even born. When we lost him during delivery, my world stopped. But over time, I realized his story didn’t end with that loss. I still write letters to him, celebrate his memory each year, and speak his name. He made me a mother, and his presence taught me more about love than I ever thought possible.",
+        author: "~ Meera"
+      },
+      {
+        text: "In the weeks after my miscarriage, I felt isolated—like everyone expected me to move on quickly. But grief has no timeline. I allowed myself to cry, to be angry, to mourn. When I finally spoke out loud about what happened, it lifted the weight a little. If you're holding it all in, please know this: you’re not alone. You’re never alone.",
+        author: "~ Kavya"
+      },
+      {
+        text: "After three losses, I stopped believing in happy endings. But then, adoption gave our lives new color. Our daughter doesn’t replace the babies we lost—but she expanded our family and filled our hearts with a joy we had almost given up on. Healing doesn't always come the way we expect it. But it does come.",
+        author: "~ Priya"
+      }
+    ];
+
+    let currentIndex = 0;
+
+    function displayStory(index) {
+      document.getElementById("story-text").innerText = `"${stories[index].text}"`;
+      document.getElementById("story-author").innerText = stories[index].author;
+    }
+
+    function nextStory() {
+      currentIndex = (currentIndex + 1) % stories.length;
+      displayStory(currentIndex);
+    }
+
+    function prevStory() {
+      currentIndex = (currentIndex - 1 + stories.length) % stories.length;
+      displayStory(currentIndex);
+    }
+
+    // Display the first story initially
+    window.onload = () => {
+      displayStory(currentIndex);
+    };
+
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+  </script>
+
+  <footer>
+    <div class="footer-top">
+      <span>Connect with us on social media</span>
+      <span class="icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </span>
+    </div>
+    <hr>
+    <div class="footer-bottom">
+      <div class="Horizontal">
+        <span class="Footer-heading">About Us</span>
+        <span>We are a community promoting cybersecurity education in a fun and professional way.</span>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Resources</span>
+        <ul>
+          <li>Blog</li>
+          <li>FAQs</li>
+          <li>Community</li>
+        </ul>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Support</span>
+        <ul>
+          <li>Contact Us</li>
+          <li>Help Center</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+      <div class="Horizontal">
+        <span class="Footer-heading">Stay Updated</span>
+        <span>Subscribe to our newsletter and never miss an update.</span>
+      </div>
+    </div>
+    <div class="last">
+      <p>&copy; 2025 Written by Riddhi. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
