@@ -16,21 +16,24 @@
       opacity: 0;
       transform: scaleY(0);
       transform-origin: top;
-      transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+      transition: opacity 0.3s ease, transform 0.3s ease;
       pointer-events: none;
       visibility: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 50;
+      background-color: white;
+      width: 14rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 0.5rem;
     }
 
-    .dropdown-menu.active,
     .group:hover .dropdown-menu {
       opacity: 1;
       transform: scaleY(1);
       pointer-events: auto;
       visibility: visible;
-    }
-
-    .dropdown-toggle.active {
-      color: #000;
     }
   </style>
 </head>
@@ -47,25 +50,25 @@
 
     <div class="hidden md:flex gap-6 text-[#4b2e2e] font-medium">
       <div class="relative group cursor-pointer">
-        <span class="dropdown-toggle font-semibold text-black flex items-center">About Us <span class="ml-1">&#9662;</span></span>
-        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
-          <a href="#trying" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Our Mission</a>
-          <a href="#trying2" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Why Choose Us?</a>
+        <span class="font-semibold text-black flex items-center">About Us <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu">
+          <a href="main.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Our Mission</a>
+          <a href="main.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Why Choose Us?</a>
         </div>
       </div>
 
       <div class="relative group cursor-pointer">
-        <span class="dropdown-toggle font-semibold text-black flex items-center">What We Treat <span class="ml-1">&#9662;</span></span>
-        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
+        <span class="font-semibold text-black flex items-center">What We Treat <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu">
           <a href="./post1.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Postpartum Depression</a>
           <a href="./post2.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Stress and Emotional Burnout</a>
-          <a href="./post3.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Birth Trauma and PTSD Treatment</a>
+          <a href="./post3.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Birth Trauma and PTSD</a>
         </div>
       </div>
 
       <div class="relative group cursor-pointer">
-        <span class="dropdown-toggle font-semibold text-black flex items-center">Our Rooms <span class="ml-1">&#9662;</span></span>
-        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
+        <span class="font-semibold text-black flex items-center">Our Rooms <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu">
           <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Loss Room</a>
           <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Hormonal Room</a>
           <a href="#" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">New Mom Room</a>
@@ -73,14 +76,22 @@
       </div>
 
       <div class="relative group cursor-pointer">
-        <span class="dropdown-toggle font-semibold text-black flex items-center">Connect <span class="ml-1">&#9662;</span></span>
-        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50">
+        <span class="font-semibold text-black flex items-center">Connect <span class="ml-1">&#9662;</span></span>
+        <div class="dropdown-menu">
           <a href="./therapist.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">One-on-One Healing</a>
           <a href="./support.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Community Support</a>
         </div>
       </div>
 
-      <span class="font-semibold text-black cursor-pointer">Your Journal</span>
+     <div class="relative group cursor-pointer">
+  <span class="font-semibold text-black flex items-center">Your Space <span class="ml-1">&#9662;</span></span>
+  <div class="dropdown-menu right-0 left-auto">
+    <a href="letterineversent.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Unsent Letters</a>
+    <a href="echo.html" class="block px-4 py-2 text-[#b89685] hover:bg-gray-100">Confession Page</a>
+  </div>
+</div>
+
+
     </div>
   </nav>
 
