@@ -27,8 +27,8 @@ Each room includes:
 - Letter-writing option for emotional expression
 
 <div align="center">
-  <img src="./Images/rooms.jpg" alt="Rooms Screenshot 1" width="400"/>
-  <img src="./Images/rooms2.jpg" alt="Rooms Screenshot 2" width="400"/>
+  <img src="./Images/rooms.jpg" alt="Rooms Screenshot 1" width="300" height="300"/>
+  <img src="./Images/rooms2.jpg" alt="Rooms Screenshot 2" width="300" height="300"/>
 </div>
 
 ###  Echoes (Confession Page)
