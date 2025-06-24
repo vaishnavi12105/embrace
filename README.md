@@ -1,6 +1,6 @@
 #  Embrace – Mental Wellness Platform for Women
 
-**Embrace** is a safe, supportive, and judgment-free platform built to support women through the emotional challenges of postpartum depression, hormonal disorders (like PCOS/PCOD), pregnancy loss, anxiety, and more. It provides a blend of emotional outlets, education, and community—giving women a space to feel seen, heard, and healed.
+**Embrace** is a safe, supportive, and judgment-free platform built to support women through the emotional challenges of postpartum depression, hormonal disorders (like PCOS/PCOD), pregnancy loss, anxiety, and more. It provides a blend of emotional outlets, education, and community giving women a space to feel seen, heard, and healed.
 
 
 
@@ -77,7 +77,7 @@ Education and awareness page covering:
 
 ## 💡 Inspiration
 
-The inspiration behind *Embrace* came from the realization that there are very few safe spaces online that truly support women emotionally—especially during the most silent and painful chapters of their lives. Postpartum breakdowns, miscarriages, PCOS struggles, and silent resentment in motherhood are often brushed aside. We wanted to give those emotions a home—where healing begins not with advice, but with validation.
+The inspiration behind *Embrace* came from the realization that there are very few safe spaces online that truly support women emotionally especially during the most silent and painful chapters of their lives. Postpartum breakdowns, miscarriages, PCOS struggles, and silent resentment in motherhood are often brushed aside. We wanted to give those emotions a home where healing begins not with advice, but with validation.
 
 ---
 
