@@ -32,7 +32,7 @@ Each room includes:
 An anonymous space where women can write and read unfiltered, emotional confessions—helping them feel less alone.
 
 <div align="center">
-  <img src="./Images/echo.jpg" alt="Confession Page" width="400" height="300"/>
+  <img src="./Images/echo.jpg" alt="Confession Page" width="500" height="300"/>
 </div>
 
 ###  Unsent Letters
@@ -44,7 +44,7 @@ A deeply personal journaling tool to write letters to:
 - Or even to themselves 
 
 <div align="center">
-  <img src="./Images/letters.jpg" alt="Letters I Never Sent" width="400" height="300"/>
+  <img src="./Images/letters.jpg" alt="Letters I Never Sent" width="500" height="300"/>
 </div>
 
 
