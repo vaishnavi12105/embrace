@@ -17,9 +17,6 @@ Many women silently struggle with postpartum depression, anxiety, pregnancy loss
 - **Hormonal Room** – For PCOS, anxiety, and hormonal struggles.  
 - **New Mom Room** – For postpartum emotions, body image issues, and relationship changes.  
 
-![Rooms img](./Images/rooms.jpg)
-![Rooms img](./Images/rooms2.jpg)
-
 Each room includes:
 - Real-life stories
 - Curated videos, articles, podcasts, and books
@@ -27,14 +24,16 @@ Each room includes:
 - Letter-writing option for emotional expression
 
 <div align="center">
-  <img src="./Images/rooms.jpg" alt="Rooms Screenshot 1" width="300" height="300"/>
-  <img src="./Images/rooms2.jpg" alt="Rooms Screenshot 2" width="300" height="300"/>
+  <img src="./Images/rooms.jpg" alt="Rooms Screenshot 1" width="400" height="300"/>
+  <img src="./Images/rooms2.jpg" alt="Rooms Screenshot 2" width="400" height="300"/>
 </div>
 
 ###  Echoes (Confession Page)
 An anonymous space where women can write and read unfiltered, emotional confessions—helping them feel less alone.
 
-![Confession Page Image](./Images/echo.jpg)
+<div align="center">
+  <img src="./Images/echo.jpg" alt="Confession Page" width="400" height="300"/>
+</div>
 
 ###  Unsent Letters
 A deeply personal journaling tool to write letters to:
@@ -42,16 +41,21 @@ A deeply personal journaling tool to write letters to:
 - A partner  
 - Their body  
 - Their hopes and fears  
-- Or even to themselves  
-![Letters I Never Sent](./Images/letters.jpg)
+- Or even to themselves 
+
+<div align="center">
+  <img src="./Images/letters.jpg" alt="Letters I Never Sent" width="400" height="300"/>
+</div>
+
 
 ###  Connect
 - **One-on-One Healing** – Therapist discovery & recommendation.
 - **Community Support** – Text & voice-based anonymous support circles.
 
-![Community Support](./Images/support.jpg)
-![Therapy](./Images/support2.jpg)
-
+<div align="center">
+  <img src="./Images/support.jpg" alt="Community Support" width="400" height="300"/>
+  <img src="./Images/support2.jpg" alt="Therapy Support" width="400" height="300"/>
+</div>
 
 ###  What We Treat
 Education and awareness page covering:
