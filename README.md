@@ -17,8 +17,8 @@ Many women silently struggle with postpartum depression, anxiety, pregnancy loss
 - **Hormonal Room** – For PCOS, anxiety, and hormonal struggles.  
 - **New Mom Room** – For postpartum emotions, body image issues, and relationship changes.  
 
-![Rooms img](./images/rooms.jpg)
-![Rooms img](./images/rooms2.jpg)
+![Rooms img](./Images/rooms.jpg)
+![Rooms img](./Images/rooms2.jpg)
 
 Each room includes:
 - Real-life stories
@@ -29,7 +29,7 @@ Each room includes:
 ###  Echoes (Confession Page)
 An anonymous space where women can write and read unfiltered, emotional confessions—helping them feel less alone.
 
-![Confession Page Image](./images/echo.jpg)
+![Confession Page Image](./Images/echo.jpg)
 
 ###  Unsent Letters
 A deeply personal journaling tool to write letters to:
@@ -38,14 +38,14 @@ A deeply personal journaling tool to write letters to:
 - Their body  
 - Their hopes and fears  
 - Or even to themselves  
-![Letters I Never Sent](./images/letters.jpg)
+![Letters I Never Sent](./Images/letters.jpg)
 
 ###  Connect
 - **One-on-One Healing** – Therapist discovery & recommendation.
 - **Community Support** – Text & voice-based anonymous support circles.
 
-![Community Support](./images/support.jpg)
-![Therapy](./images/support2.jpg)
+![Community Support](./Images/support.jpg)
+![Therapy](./Images/support2.jpg)
 
 
 ###  What We Treat
