@@ -17,6 +17,9 @@ Many women silently struggle with postpartum depression, anxiety, pregnancy loss
 - **Hormonal Room** – For PCOS, anxiety, and hormonal struggles.  
 - **New Mom Room** – For postpartum emotions, body image issues, and relationship changes.  
 
+![Rooms img](./images/rooms.jpg)
+![Rooms img](./images/rooms2.jpg)
+
 Each room includes:
 - Real-life stories
 - Curated videos, articles, podcasts, and books
@@ -26,17 +29,24 @@ Each room includes:
 ###  Echoes (Confession Page)
 An anonymous space where women can write and read unfiltered, emotional confessions—helping them feel less alone.
 
-###  Letters I Never Sent (Unsent Letters)
+![Confession Page Image](./images/echo.jpg)
+
+###  Unsent Letters
 A deeply personal journaling tool to write letters to:
 - Their baby  
 - A partner  
 - Their body  
 - Their hopes and fears  
 - Or even to themselves  
+![Letters I Never Sent](./images/letters.jpg)
 
 ###  Connect
 - **One-on-One Healing** – Therapist discovery & recommendation.
 - **Community Support** – Text & voice-based anonymous support circles.
+
+![Community Support](./images/support.jpg)
+![Therapy](./images/support2.jpg)
+
 
 ###  What We Treat
 Education and awareness page covering:
@@ -44,6 +54,30 @@ Education and awareness page covering:
 - Causes, symptoms, therapy types
 - Mental health myths and guidance
 
+---
+
+## ✅ Uses of Embrace
+
+- 🔄 **Emotional Processing** – Write, release, and reflect through letters and confessions.
+- 🫂 **Peer Support** – Feel connected with women going through similar experiences.
+- 📖 **Self-Education** – Learn about mental health conditions like postpartum depression and PCOS.
+- 🧑‍⚕️ **Professional Help** – Easily find and get matched with mental health professionals.
+- 🧘 **Healing Tools** – Use real-life stories and journaling to find hope and closure.
+
+---
+
+## 💡 Inspiration
+
+The inspiration behind *Embrace* came from the realization that there are very few safe spaces online that truly support women emotionally—especially during the most silent and painful chapters of their lives. Postpartum breakdowns, miscarriages, PCOS struggles, and silent resentment in motherhood are often brushed aside. We wanted to give those emotions a home—where healing begins not with advice, but with validation.
+
+---
+
+## 👥 Team
+
+- **Riddhi**   
+- **Vaishnavi**
+- **Sanvi**
+- **Ruzal**
 ---
 
 ## 🛠️ Tech Stack

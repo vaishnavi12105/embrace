@@ -98,7 +98,7 @@
   </nav>
 
 
-  <div class="pt-20"> <!-- Add padding to push content below fixed nav -->
+  <div class="pt-20"> 
     <div class="quote-box">
         <p class="loss-quote">You are welcome here. Everything you're feeling is valid. This is your safe space to breathe, to be honest, and to begin healing.</p>
         <p class="intro-to-page">Becoming a mother is often painted as a joyful beginning — but the truth can be far more complicated. Postpartum depression, body image struggles, and emotional disconnect can leave you feeling lost, guilty, or overwhelmed. Maybe you feel numb. Maybe you feel resentment and don’t understand why. That doesn’t make you a bad mother — it makes you human. This space exists to hold those feelings without judgment. Whether you’re searching for peace, understanding, or simply the reminder that you're not alone, you belong here. Through stories, support, and care, we hope this room becomes a place to rest, reconnect, and remember: you matter too.</p>
@@ -124,8 +124,8 @@
 
     <div class="fancy-divider">
         <span class="line"></span>
-        <span class="symbol">&#8764;</span> <!-- Tilde Operator -->
-        <span class="symbol">&#9670;</span> <!-- Black Diamond -->
+        <span class="symbol">&#8764;</span> 
+        <span class="symbol">&#9670;</span> 
         <span class="symbol">&#8764;</span>
         <span class="line"></span>
     </div>
@@ -340,7 +340,7 @@
 
             const buttonCount = buttons.length;
             slider.style.width = `${100 / buttonCount}%`;
-            slider.style.left = '0%'; // First button
+            slider.style.left = '0%'; 
 
             buttons.forEach((btn, index) => {
             btn.addEventListener('click', () => {
@@ -358,7 +358,6 @@
             });
             });
 
-            // Show first story on load
             displayStory(currentIndex);
         });
 
@@ -387,7 +386,6 @@
             const storyText = document.getElementById("story-text");
             const storyAuthor = document.getElementById("story-author");
 
-            // Optional: Fade out-in effect
             storyText.style.opacity = 0;
             storyAuthor.style.opacity = 0;
 

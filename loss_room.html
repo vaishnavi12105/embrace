@@ -98,7 +98,7 @@
   </nav>
 
 
-    <div class="pt-8"> <!-- Add padding to push content below fixed nav -->
+    <div class="pt-8"> 
       <div class="quote-box">
         <p class="loss-quote">You are welcome here. Everything you're feeling is valid. This is your safe space to begin healing.</p>
         <p class="intro-to-page">Grief after loss can feel isolating, confusing, and painfully silent especially when the world moves on around you. This space exists to honor that quiet pain. Whether you're looking for understanding, comfort, or simply a place to feel seen, you're not alone here. Through shared stories, gentle resources, and a supportive community, we hope this page becomes a small step toward healing in your own time, and your own way.</p>
@@ -125,8 +125,8 @@
 
   <div class="fancy-divider">
     <span class="line"></span>
-    <span class="symbol">&#8764;</span> <!-- Tilde Operator -->
-    <span class="symbol">&#9670;</span> <!-- Black Diamond -->
+    <span class="symbol">&#8764;</span> 
+    <span class="symbol">&#9670;</span> 
     <span class="symbol">&#8764;</span>
     <span class="line"></span>
   </div>
@@ -345,7 +345,7 @@
 
       const buttonCount = buttons.length;
       slider.style.width = `${100 / buttonCount}%`;
-      slider.style.left = '0%'; // First button
+      slider.style.left = '0%'; 
 
       buttons.forEach((btn, index) => {
         btn.addEventListener('click', () => {
@@ -400,7 +400,6 @@
       displayStory(currentIndex);
     }
 
-    // Display the first story initially
     window.onload = () => {
       displayStory(currentIndex);
     };
