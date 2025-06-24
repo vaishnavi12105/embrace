@@ -26,6 +26,11 @@ Each room includes:
 - Community support & therapist recommendations
 - Letter-writing option for emotional expression
 
+<div align="center">
+  <img src="./Images/rooms.png" alt="Echo Screenshot" width="400"/>
+  <img src="./Images/rooms2.png" alt="Echo Screenshot" width="400"/>
+</div>
+
 ###  Echoes (Confession Page)
 An anonymous space where women can write and read unfiltered, emotional confessions—helping them feel less alone.
 
